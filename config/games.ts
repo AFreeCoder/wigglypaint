@@ -12,127 +12,86 @@ export const GAMES: Game[] = [
     players: '1 Player',
     rating: 4.5,
     playCount: '12.5K',
-    type: 'local'
-  },
-  {
-    id: 2,
-    title: 'Snake Game',
-    description: 'Classic snake game - grow longer by eating food',
-    image: '🐍',
-    category: 'Arcade',
-    tags: ['Classic', 'Arcade', 'Retro'],
-    difficulty: 'Medium',
-    players: '1 Player',
-    rating: 4.8,
-    playCount: '25.3K',
-    type: 'local'
+    type: 'iframe',
+    url: 'https://r2.wigglypaint.co/WigglyPainthtml'
   },
   {
     id: 3,
-    title: 'Tic Tac Toe',
-    description: 'Play the timeless game of Xs and Os',
-    image: '⭕',
-    category: 'Strategy',
-    tags: ['Classic', 'Logic', 'Quick'],
-    difficulty: 'Easy',
-    players: '2 Players',
-    rating: 4.2,
-    playCount: '8.7K',
-    type: 'local'
-  },
-  {
-    id: 4,
-    title: 'Word Scramble',
-    description: 'Unscramble letters to form words',
-    image: '📝',
-    category: 'Word',
-    tags: ['Vocabulary', 'Letters', 'Brain'],
-    difficulty: 'Hard',
-    players: '1 Player',
-    rating: 4.6,
-    playCount: '15.9K',
-    type: 'local'
-  },
-  {
-    id: 5,
-    title: 'Color Match',
-    description: 'Match colors in this vibrant puzzle game',
-    image: '🎨',
+    title: 'Number Guessing Game',
+    description: 'Guess the secret number between 1 and 100 with hints and scoring',
+    image: '🎲',
     category: 'Puzzle',
-    tags: ['Colors', 'Matching', 'Visual'],
-    difficulty: 'Medium',
+    tags: ['Numbers', 'Logic', 'Brain', 'Quick'],
+    difficulty: 'Easy',
     players: '1 Player',
     rating: 4.3,
-    playCount: '9.2K',
-    type: 'local'
+    playCount: '8.2K',
+    type: 'local',
+    gameInfo: {
+      introduction: {
+        title: 'Number Guessing Challenge',
+        description: 'Test your logical thinking and intuition! Guess the secret number between 1 and 100 with the fewest attempts possible. Use hints and feedback to narrow down your guesses and achieve the best score.',
+        features: [
+          {
+            icon: '🎯',
+            title: 'Smart Hints',
+            description: 'Get helpful hints after 5 attempts to guide your guesses'
+          },
+          {
+            icon: '📊',
+            title: 'Score System',
+            description: 'Earn ratings based on your performance and number of attempts'
+          },
+          {
+            icon: '📈',
+            title: 'Progress Tracking',
+            description: 'View your guess history and learn from your attempts'
+          }
+        ]
+      },
+      howToPlay: {
+        title: 'How to Play Number Guessing',
+        steps: [
+          { step: 1, icon: '🎲', title: 'Start the Game', description: 'A random number between 1 and 100 is generated' },
+          { step: 2, icon: '💭', title: 'Make Your Guess', description: 'Enter a number between 1 and 100 in the input field' },
+          { step: 3, icon: '📈📉', title: 'Get Feedback', description: 'See if your guess is too high, too low, or correct' },
+          { step: 4, icon: '🔥', title: 'Use Hints', description: 'After 5 attempts, get temperature hints about how close you are' },
+          { step: 5, icon: '🎉', title: 'Win the Game', description: 'Guess the correct number and see your score rating' },
+          { step: 6, icon: '🔄', title: 'Play Again', description: 'Start a new game to improve your score' }
+        ],
+        tips: [
+          'Start with 50 to divide the range in half',
+          'Use binary search strategy for optimal results',
+          'Pay attention to your guess history to avoid duplicates',
+          'Temperature hints appear after 5 attempts to help you'
+        ]
+      },
+      faq: [
+        {
+          question: 'What is the range of numbers I can guess?',
+          answer: 'The secret number is always between 1 and 100 (inclusive).'
+        },
+        {
+          question: 'How does the scoring system work?',
+          answer: 'Excellent (🏆): 1-5 attempts, Great (🥈): 6-8 attempts, Good (🥉): 9-12 attempts, Keep practicing (🎯): 13+ attempts.'
+        },
+        {
+          question: 'When do I get hints?',
+          answer: 'Temperature hints (very close, getting warmer, cold, very cold) appear after your 5th attempt to help guide your guesses.'
+        },
+        {
+          question: 'Can I guess the same number twice?',
+          answer: 'No, the game will remind you if you try to guess a number you\'ve already tried.'
+        },
+        {
+          question: 'What\'s the best strategy for guessing?',
+          answer: 'Use binary search: start with 50, then go to 25 or 75 based on feedback, and continue halving the range.'
+        }
+      ]
+    }
   },
   {
-    id: 6,
-    title: 'Math Quiz',
-    description: 'Challenge your math skills with quick calculations',
-    image: '🔢',
-    category: 'Education',
-    tags: ['Math', 'Numbers', 'Learning'],
-    difficulty: 'Hard',
-    players: '1 Player',
-    rating: 4.4,
-    playCount: '11.1K',
-    type: 'local'
-  },
-  {
-    id: 7,
-    title: 'Bubble Pop',
-    description: 'Pop colorful bubbles in this relaxing game',
-    image: '🫧',
-    category: 'Casual',
-    tags: ['Relaxing', 'Colors', 'Fun'],
-    difficulty: 'Easy',
-    players: '1 Player',
-    rating: 4.1,
-    playCount: '18.7K',
-    type: 'local'
-  },
-  {
-    id: 8,
-    title: 'Chess Master',
-    description: 'Play chess against AI or friends',
-    image: '♟️',
-    category: 'Strategy',
-    tags: ['Chess', 'Strategy', 'Classic'],
-    difficulty: 'Hard',
-    players: '2 Players',
-    rating: 4.7,
-    playCount: '22.4K',
-    type: 'local'
-  },
-  {
-    id: 9,
-    title: 'Number Puzzle',
-    description: 'Slide tiles to arrange numbers in order',
-    image: '🔢',
-    category: 'Puzzle',
-    tags: ['Numbers', 'Logic', 'Sliding'],
-    difficulty: 'Medium',
-    players: '1 Player',
-    rating: 4.0,
-    playCount: '7.3K',
-    type: 'local'
-  },
-  {
-    id: 10,
-    title: 'Racing Cars',
-    description: 'Race against time in this thrilling game',
-    image: '🏎️',
-    category: 'Racing',
-    tags: ['Speed', 'Cars', 'Racing'],
-    difficulty: 'Medium',
-    players: '1 Player',
-    rating: 4.5,
-    playCount: '31.2K',
-    type: 'local'
-  },
-  {
-    id: 11,
+    id: 2,
     title: 'OVO Unblocked',
     description: 'Play the popular OVO parkour game',
     image: '🍾',
@@ -234,3 +193,9 @@ export const GAME_TAGS: GameTag[] = [
 export const GAME_DIFFICULTIES: (GameDifficulty | 'All')[] = [
   'All', 'Easy', 'Medium', 'Hard'
 ]
+
+// 首页游戏配置
+export const HOMEPAGE_GAME = {
+  id: 3, // Number Guessing Game
+  component: 'NumberGuessingGame'
+}

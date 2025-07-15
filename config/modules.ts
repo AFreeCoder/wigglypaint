@@ -1,16 +1,16 @@
 // 模块配置 - 通过修改这个文件来控制各个模块的显示
 export const MODULE_CONFIG = {
   // 左侧广告位
-  LEFT_AD: true,
+  LEFT_AD: false,
   
   // 右侧广告位
-  RIGHT_AD: true,
+  RIGHT_AD: false,
   
   // 底部广告位
-  BOTTOM_AD: true,
+  BOTTOM_AD: false,
   
   // 相关游戏推荐
-  RELATED_GAMES: true,
+  RELATED_GAMES: false,
   
   // 游戏信息说明
   GAME_INFO: true,
