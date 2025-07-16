@@ -161,7 +161,7 @@ npm install
 npm run dev
 ```
 
-3. 打开浏览器访问 [http://localhost:3000](http://localhost:3000)
+3. 打开浏览器访问 [https://wigglypaint.co](https://wigglypaint.co)
 
 ## 构建生产版本
 
@@ -382,7 +382,7 @@ module.exports = {
 
 ## 技术栈
 
-- **框架**: Next.js 14 (App Router)
+- **框架**: Next.js 15 (App Router)
 - **语言**: TypeScript
 - **样式**: Tailwind CSS
 - **部署**: 支持 Vercel、Netlify 等平台
@@ -477,7 +477,3 @@ export async function getGames(): Promise<Game[]> {
 3. **Cookie 使用**: 如果使用第三方广告服务，请确保在隐私政策中明确说明
 4. **数据保护**: 确保您的数据处理符合当地法律法规要求
 5. **法律审查**: 建议在正式使用前请法律专业人士审查这些法律文件
-
-## 许可证
-
-MIT License 
