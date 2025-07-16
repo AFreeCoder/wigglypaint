@@ -7,10 +7,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* 网站信息 */}
           <div className="text-center md:text-left">
-            <h3 className="text-xl font-bold mb-4">🎮 Fun Online Games</h3>
+            <h3 className="text-xl font-bold mb-4">🎨 WigglyPaint</h3>
             <p className="text-gray-300 text-sm leading-relaxed">
-              Providing free, entertaining online games for everyone. 
-              Enjoy hours of fun with our collection of puzzles, strategy games, and more.
+              Where lines you draw wiggle with life! Create animated pixel art, comics & doodles with 8 unique brushes that breathe personality into every stroke.
             </p>
           </div>
 
@@ -40,7 +39,7 @@ export default function Footer() {
           <div className="text-center md:text-left">
             <h4 className="font-semibold mb-4">Contact</h4>
             <div className="space-y-2 text-sm text-gray-300">
-              <p>Email: support@funonlinegames.com</p>
+              <p>Coming Soon: Contact information will be available shortly</p>
               <p>Response Time: Within 24 hours</p>
             </div>
           </div>
@@ -49,7 +48,7 @@ export default function Footer() {
         {/* 底部版权信息 */}
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
           <p className="text-sm text-gray-400 mb-2">
-            &copy; 2025 Fun Online Games. All rights reserved.
+            &copy; 2025 WigglyPaint. All rights reserved.
           </p>
           <p className="text-xs text-gray-500">
             Play responsibly and have fun! | 

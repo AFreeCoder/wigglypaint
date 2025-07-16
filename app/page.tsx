@@ -8,6 +8,7 @@ import CookieConsent from '@/components/CookieConsent'
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 import { MODULE_CONFIG } from '@/config/modules'
+import { HOMEPAGE_GAME, GAMES_WITH_SLUGS } from '@/config/games'
 import Link from 'next/link'
 import { useEffect } from 'react'
 
@@ -21,13 +22,16 @@ export default function Home() {
     }
   }, [])
 
+  // 获取首页游戏配置
+  const homepageGame = GAMES_WITH_SLUGS.find(game => game.id === HOMEPAGE_GAME.id)
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50">
       {/* 头部 */}
       <Header />
 
       {/* 主要内容区域 */}
-      <main className="max-w-7xl mx-auto px-4 py-6 sm:px-6 sm:py-8">
+      <main className="max-w-none mx-auto px-4 py-6 sm:px-6 sm:py-8" style={{ maxWidth: '96rem' }}>
         <div className="flex flex-col lg:flex-row lg:gap-8">
           {/* 左侧广告位 - 桌面端 */}
           <div className="hidden lg:block lg:w-48 flex-shrink-0">
@@ -54,7 +58,7 @@ export default function Home() {
             </div>
 
             {/* 游戏信息 */}
-            <GameInfo enabled={MODULE_CONFIG.GAME_INFO} />
+            <GameInfo enabled={MODULE_CONFIG.GAME_INFO} game={homepageGame} />
           </div>
 
           {/* 右侧广告位 - 桌面端 */}

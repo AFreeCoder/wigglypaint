@@ -78,6 +78,10 @@ export type GameTag =
   | 'Parkour'
   | 'Platform'
   | 'Skill'
+  | 'Drawing'
+  | 'Animation'
+  | 'Creative'
+  | 'Art'
 
 export type GameDifficulty = 'Easy' | 'Medium' | 'Hard'
 

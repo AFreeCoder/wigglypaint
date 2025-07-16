@@ -22,7 +22,7 @@ export default function PrivacyPolicy() {
             <section>
               <h2 className="text-2xl font-bold text-gray-800 mb-4">1. Introduction</h2>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Welcome to Fun Online Games ("we," "our," or "us"). We are committed to protecting your privacy and ensuring you have a positive experience on our website. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website and play our games.
+                Welcome to WigglyPaint ("we," "our," or "us"). We are committed to protecting your privacy and ensuring you have a positive experience on our website. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website and use our creative tools.
               </p>
               <p className="text-gray-600 leading-relaxed">
                 By using our website, you consent to the data practices described in this policy. If you do not agree with our policies and practices, please do not use our website.
@@ -177,7 +177,7 @@ export default function PrivacyPolicy() {
               </p>
               <div className="bg-gray-50 rounded-lg p-4">
                 <p className="text-gray-700">
-                  <strong>Email:</strong> privacy@funonlinegames.com<br />
+                  <strong>Email:</strong> [Contact information coming soon]<br />
                   <strong>Address:</strong> [Your Business Address]<br />
                   <strong>Response Time:</strong> We will respond to your inquiry within 30 days
                 </p>

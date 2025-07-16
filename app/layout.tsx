@@ -5,26 +5,31 @@ import { MODULE_CONFIG } from '@/config/modules'
 
 const inter = Inter({ subsets: ['latin'] })
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+}
+
 export const metadata: Metadata = {
-  title: 'Fun Online Games - Play Free Games Online',
-  description: 'Play the best free online games including puzzles, arcade games, strategy games, and more. No downloads required! Enjoy hours of entertainment with our collection of browser games.',
-  keywords: 'free games, online games, browser games, puzzles, arcade games, strategy games, word games, casual games, no download games',
-  authors: [{ name: 'Fun Online Games Team' }],
-  creator: 'Fun Online Games',
-  publisher: 'Fun Online Games',
+  metadataBase: new URL('https://wigglypaint.co'),
+  title: 'WigglyPaint - Create Animated Pixel Art, Comics & Doodles with Wiggly Lines',
+  description: 'Draw with 8 unique animated brushes that create wiggly, jiggly lines with personality! Free online drawing tool for animated pixel art, GIF creation, and living doodles. No signup required - works on all devices.',
+  keywords: 'wiggly paint, animated drawing, pixel art, GIF maker, online drawing tool, animated brushes, wiggly lines, jiggly drawing, free drawing app, animated pixel art, digital doodles, living lines, GIF creation, creative drawing',
+  authors: [{ name: 'WigglyPaint Team' }],
+  creator: 'WigglyPaint',
+  publisher: 'WigglyPaint',
   robots: 'index, follow',
-  viewport: 'width=device-width, initial-scale=1',
   openGraph: {
-    title: 'Fun Online Games - Play Free Games Online',
-    description: 'Play the best free online games including puzzles, arcade games, strategy games, and more. No downloads required!',
-    url: 'https://funonlinegames.com',
-    siteName: 'Fun Online Games',
+    title: 'WigglyPaint - Create Animated Pixel Art, Comics & Doodles with Wiggly Lines',
+    description: 'Draw with 8 unique animated brushes that create wiggly, jiggly lines with personality! Free online drawing tool for animated pixel art and GIF creation.',
+    url: 'https://wigglypaint.co',
+    siteName: 'WigglyPaint',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Fun Online Games - Free Browser Games'
+        alt: 'WigglyPaint - Creative Drawing & Painting Game'
       }
     ],
     locale: 'en_US',
@@ -32,10 +37,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Fun Online Games - Play Free Games Online',
-    description: 'Play the best free online games including puzzles, arcade games, strategy games, and more. No downloads required!',
+    title: 'WigglyPaint - Create Animated Pixel Art, Comics & Doodles with Wiggly Lines',
+    description: 'Draw with 8 unique animated brushes that create wiggly, jiggly lines with personality! Free online drawing tool for animated pixel art and GIF creation.',
     images: ['/twitter-image.png'],
-    creator: '@funonlinegames',
+    creator: '@wigglypaint',
   },
   icons: {
     icon: [
@@ -51,7 +56,7 @@ export const metadata: Metadata = {
   },
   manifest: '/manifest.json',
   alternates: {
-    canonical: 'https://funonlinegames.com',
+    canonical: 'https://wigglypaint.co',
   },
   category: 'games',
 }

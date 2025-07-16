@@ -3,89 +3,114 @@ import { Game, GameCategory, GameTag, GameDifficulty } from '@/types/game'
 export const GAMES: Game[] = [
   {
     id: 1,
-    title: 'Memory Match',
-    description: 'Test your memory with this classic card matching game',
-    image: '🎴',
-    category: 'Puzzle',
-    tags: ['Memory', 'Cards', 'Classic'],
+    title: 'WigglyPaint',
+    description: 'Draw with 8 animated brushes that create wiggly, jiggly lines with personality! Free online pixel art & GIF maker with living, breathing lines.',
+    image: '🎨',
+    category: 'Casual',
+    tags: ['Drawing', 'Animation', 'Creative', 'Art'],
     difficulty: 'Easy',
     players: '1 Player',
     rating: 4.5,
     playCount: '12.5K',
     type: 'iframe',
-    url: 'https://r2.wigglypaint.co/WigglyPainthtml'
-  },
-  {
-    id: 3,
-    title: 'Number Guessing Game',
-    description: 'Guess the secret number between 1 and 100 with hints and scoring',
-    image: '🎲',
-    category: 'Puzzle',
-    tags: ['Numbers', 'Logic', 'Brain', 'Quick'],
-    difficulty: 'Easy',
-    players: '1 Player',
-    rating: 4.3,
-    playCount: '8.2K',
-    type: 'local',
+    url: 'https://r2.wigglypaint.co/WigglyPainthtml',
     gameInfo: {
       introduction: {
-        title: 'Number Guessing Challenge',
-        description: 'Test your logical thinking and intuition! Guess the secret number between 1 and 100 with the fewest attempts possible. Use hints and feedback to narrow down your guesses and achieve the best score.',
+        title: 'WigglyPaint: The Living Drawing Tool',
+        description: 'Unleash your imagination with WigglyPaint - where lines you draw wiggle with life! WigglyPaint lets you create animated pixel art, comics, and doodles with 8 unique animated brushes that breathe personality into every stroke. This free WigglyPaint drawing tool transforms static artwork into living, animated masterpieces that captivate and delight.',
         features: [
           {
+            icon: '🎨',
+            title: '8 Living Animated Brushes',
+            description: 'Each WigglyPaint brush creates unique wiggly, jiggly line effects with distinct personality and sound effects'
+          },
+          {
+            icon: '🎬',
+            title: 'Instant GIF Creation',
+            description: 'Export your WigglyPaint animated artwork as high-quality GIFs perfect for social media sharing'
+          },
+          {
+            icon: '📱',
+            title: 'Universal Compatibility',
+            description: 'Works seamlessly on PC, mobile, tablet, and iPad with responsive touch controls'
+          },
+          {
+            icon: '🔒',
+            title: 'Privacy & Freedom',
+            description: 'No signup required, unlimited usage, all data stays on your device'
+          },
+          {
+            icon: '✨',
+            title: 'Intuitive Interface',
+            description: 'Simple tools: eraser, clear button, undo, and adjustable marker sizes'
+          },
+          {
             icon: '🎯',
-            title: 'Smart Hints',
-            description: 'Get helpful hints after 5 attempts to guide your guesses'
-          },
-          {
-            icon: '📊',
-            title: 'Score System',
-            description: 'Earn ratings based on your performance and number of attempts'
-          },
-          {
-            icon: '📈',
-            title: 'Progress Tracking',
-            description: 'View your guess history and learn from your attempts'
+            title: 'Creative Versatility',
+            description: 'Perfect for pixel art, animated sketches, memes, comics, and expressive doodles'
           }
         ]
       },
       howToPlay: {
-        title: 'How to Play Number Guessing',
+        title: 'Master the Art of Living Lines',
         steps: [
-          { step: 1, icon: '🎲', title: 'Start the Game', description: 'A random number between 1 and 100 is generated' },
-          { step: 2, icon: '💭', title: 'Make Your Guess', description: 'Enter a number between 1 and 100 in the input field' },
-          { step: 3, icon: '📈📉', title: 'Get Feedback', description: 'See if your guess is too high, too low, or correct' },
-          { step: 4, icon: '🔥', title: 'Use Hints', description: 'After 5 attempts, get temperature hints about how close you are' },
-          { step: 5, icon: '🎉', title: 'Win the Game', description: 'Guess the correct number and see your score rating' },
-          { step: 6, icon: '🔄', title: 'Play Again', description: 'Start a new game to improve your score' }
+          { step: 1, icon: '🚀', title: 'Launch WigglyPaint', description: 'Open WigglyPaint instantly in your browser - no downloads or signups required' },
+          { step: 2, icon: '🎨', title: 'Choose Your Brush', description: 'Select from 8 animated brushes on the right panel, each with unique wiggly personality' },
+          { step: 3, icon: '✏️', title: 'Draw Living Lines', description: 'Click and drag to create animated strokes that wiggle, dance, and breathe with life' },
+          { step: 4, icon: '🎵', title: 'Hear Your Art', description: 'Each brush produces distinct sound effects as you draw, adding audio dimension to creativity' },
+          { step: 5, icon: '🛠️', title: 'Use Creative Tools', description: 'Adjust marker size, use eraser, undo mistakes, or clear canvas for fresh starts' },
+          { step: 6, icon: '🎬', title: 'Export as GIF', description: 'Save your WigglyPaint animated masterpiece as a GIF to share on social media or with friends' },
+          { step: 7, icon: '🌟', title: 'Share & Inspire', description: 'Post your WigglyPaint creations online and inspire others with your living artwork' }
         ],
         tips: [
-          'Start with 50 to divide the range in half',
-          'Use binary search strategy for optimal results',
-          'Pay attention to your guess history to avoid duplicates',
-          'Temperature hints appear after 5 attempts to help you'
+          'Experiment with WigglyPaint brush combinations - layer different animated effects for complex artwork',
+          'Draw at varying speeds to control the intensity of WigglyPaint wiggly animations',
+          'Use the WigglyPaint eraser tool to selectively remove parts while keeping animations intact',
+          'Try creating pixel art characters, animated doodles, or wiggly comics with WigglyPaint',
+          'WigglyPaint is perfect for memes, social media content, and creative expression',
+          'Your WigglyPaint progress autosaves in the browser - pick up where you left off anytime'
         ]
       },
       faq: [
         {
-          question: 'What is the range of numbers I can guess?',
-          answer: 'The secret number is always between 1 and 100 (inclusive).'
+          question: 'What makes WigglyPaint\'s animated drawing so unique?',
+          answer: 'WigglyPaint creates "living lines" that wiggle and move with personality! Unlike static drawing tools, WigglyPaint makes every stroke you make breathe with life, creating animated pixel art automatically. WigglyPaint is the only tool where your drawings literally come alive as you create them.'
         },
         {
-          question: 'How does the scoring system work?',
-          answer: 'Excellent (🏆): 1-5 attempts, Great (🥈): 6-8 attempts, Good (🥉): 9-12 attempts, Keep practicing (🎯): 13+ attempts.'
+          question: 'How do the 8 animated brushes work?',
+          answer: 'Each of the 8 WigglyPaint brushes has its own wiggly personality and sound effects. These WigglyPaint brushes create different types of animated movements - some wiggle gently, others bounce energetically, and each adds unique character to your WigglyPaint artwork. Experiment to discover your favorite!'
         },
         {
-          question: 'When do I get hints?',
-          answer: 'Temperature hints (very close, getting warmer, cold, very cold) appear after your 5th attempt to help guide your guesses.'
+          question: 'Can I export my wiggly artwork as animated GIFs?',
+          answer: 'Absolutely! WigglyPaint lets you export your WigglyPaint animated creations as high-quality GIF files that preserve all the wiggly motion effects. These WigglyPaint GIFs are perfect for sharing on social media, messaging apps, or embedding in websites.'
         },
         {
-          question: 'Can I guess the same number twice?',
-          answer: 'No, the game will remind you if you try to guess a number you\'ve already tried.'
+          question: 'Is WigglyPaint really completely free?',
+          answer: 'Yes, WigglyPaint is 100% free forever! WigglyPaint requires no signup, has no watermarks, no time limits, and unlimited usage. We believe WigglyPaint creativity should be accessible to everyone without barriers or costs.'
         },
         {
-          question: 'What\'s the best strategy for guessing?',
-          answer: 'Use binary search: start with 50, then go to 25 or 75 based on feedback, and continue halving the range.'
+          question: 'What devices and platforms support WigglyPaint?',
+          answer: 'WigglyPaint works on all modern devices: PC, Mac, mobile phones, tablets, and iPad. WigglyPaint runs in your web browser with responsive touch controls optimized for each platform. Draw with WigglyPaint using mouse, stylus, or finger!'
+        },
+        {
+          question: 'How private and secure is my artwork?',
+          answer: 'Your WigglyPaint privacy is guaranteed! All WigglyPaint drawings stay on your device - nothing is uploaded to servers or collected. WigglyPaint has no accounts, no tracking, no data harvesting. Your WigglyPaint creative work remains completely private.'
+        },
+        {
+          question: 'Do I need to download or install anything?',
+          answer: 'No downloads required! WigglyPaint runs instantly in your web browser. You can even bookmark WigglyPaint or save the page offline for use without internet connection.'
+        },
+        {
+          question: 'What type of art can I create with WigglyPaint?',
+          answer: 'Create WigglyPaint animated pixel art, living doodles, wiggly comics, moving memes, expressive sketches, and digital art with personality. WigglyPaint is perfect for social media content, creative expression, and bringing static drawings to life!'
+        },
+        {
+          question: 'Are there sound effects while drawing?',
+          answer: 'Yes! Each WigglyPaint animated brush produces unique sound effects as you draw, adding an audio dimension to your WigglyPaint creative experience. The sounds complement the visual wiggling for a truly immersive WigglyPaint art creation process.'
+        },
+        {
+          question: 'Can I use WigglyPaint for professional or commercial projects?',
+          answer: 'Absolutely! WigglyPaint is perfect for creating animated content for social media marketing, presentations, educational materials, or any project that needs eye-catching animated visuals. The WigglyPaint GIF export makes it easy to use WigglyPaint creations anywhere.'
         }
       ]
     }
@@ -93,10 +118,10 @@ export const GAMES: Game[] = [
   {
     id: 2,
     title: 'OVO Unblocked',
-    description: 'Play the popular OVO parkour game',
-    image: '🍾',
+    description: 'Master fluid parkour movements in this fast-paced platformer with 40+ challenging levels',
+    image: '🏃',
     category: 'Arcade',
-    tags: ['Parkour', 'Platform', 'Skill'],
+    tags: ['Parkour', 'Platform', 'Skill', 'Speed'],
     difficulty: 'Medium',
     players: '1 Player',
     rating: 4.8,
@@ -105,67 +130,81 @@ export const GAMES: Game[] = [
     url: 'https://joyhubcentral.com/games/ovo-unblocked/?v=20250316163142',
     gameInfo: {
       introduction: {
-        title: 'OVO Parkour Adventure',
-        description: 'Experience the thrill of parkour in this fast-paced platformer! Navigate through challenging obstacles, perfect your timing, and master the art of parkour movement in this exciting online game.',
+        title: 'OVO Parkour Mastery',
+        description: 'Take control of a stickman character in this fluid parkour platformer! Navigate through 40+ challenging levels filled with traps, obstacles, and moving platforms. Master wall-jumping, sliding, and smashing techniques to overcome increasingly complex parkour challenges.',
         features: [
           {
             icon: '🏃',
-            title: 'Fluid Movement',
-            description: 'Master smooth parkour mechanics and fluid character controls'
+            title: 'Fluid Parkour Movement',
+            description: 'Experience smooth running, jumping, wall-jumping, sliding, and smashing mechanics'
           },
           {
             icon: '🎯',
-            title: 'Challenging Levels',
-            description: 'Progress through increasingly difficult obstacle courses'
+            title: '40+ Challenging Levels',
+            description: 'Progress through diverse levels with spikes, teleports, moving platforms, and gravity changes'
           },
           {
             icon: '⚡',
-            title: 'Fast-Paced Action',
-            description: 'Quick reflexes and precise timing are key to success'
+            title: 'Fast-Paced Precision',
+            description: 'Test your reflexes and timing in this demanding platformer experience'
+          },
+          {
+            icon: '🎨',
+            title: 'Character Customization',
+            description: 'Collect bonus coins to unlock unique skins and character appearances'
           }
         ]
       },
       howToPlay: {
-        title: 'How to Master OVO',
+        title: 'How to Master OVO Parkour',
         steps: [
-          { step: 1, icon: '←→', title: 'Move Left/Right', description: 'Use arrow keys or A/D keys to move your character' },
-          { step: 2, icon: '↑', title: 'Jump', description: 'Press Up arrow or W key to jump over obstacles' },
-          { step: 3, icon: '⬇', title: 'Slide/Duck', description: 'Use Down arrow or S key to slide under barriers' },
-          { step: 4, icon: '🎯', title: 'Time Your Moves', description: 'Perfect your timing to navigate through complex obstacles' },
-          { step: 5, icon: '🏁', title: 'Reach the Goal', description: 'Complete each level by reaching the finish line' },
-          { step: 6, icon: '⭐', title: 'Improve Your Skills', description: 'Practice to achieve faster completion times' }
+          { step: 1, icon: '←→', title: 'Basic Movement', description: 'Use left and right arrow keys to move your stickman character' },
+          { step: 2, icon: '↑', title: 'Jump & Wall Jump', description: 'Press Up arrow to jump. While sliding down a wall, tap Up to wall jump' },
+          { step: 3, icon: '⬇', title: 'Slide & Smash', description: 'Press Down while running to slide under obstacles, or while airborne to smash through platforms' },
+          { step: 4, icon: '🎯', title: 'Master Timing', description: 'Perfect your timing for spikes, moving platforms, and teleports' },
+          { step: 5, icon: '🪙', title: 'Collect Coins', description: 'Grab bonus coins throughout levels to unlock character skins' },
+          { step: 6, icon: '🏁', title: 'Complete Levels', description: 'Navigate through 40+ increasingly challenging parkour levels' }
         ],
         tips: [
-          'Practice wall jumping to reach higher platforms',
-          'Use momentum to your advantage on longer jumps',
-          'Watch out for moving obstacles and time your moves accordingly',
-          'Don\'t rush - precision is more important than speed'
+          'Combine wall jumping with sliding for advanced movement techniques',
+          'Use momentum from running to make longer jumps',
+          'Smash move (Down in air) helps pass through transparent platforms',
+          'Practice makes perfect - levels get progressively more challenging',
+          'Your progress automatically saves in the browser'
         ]
       },
       faq: [
         {
           question: 'What are the controls for OVO?',
-          answer: 'Use arrow keys or WASD keys to move. Up/W to jump, Down/S to slide, Left/A and Right/D to move horizontally.'
+          answer: 'Use arrow keys to control your character: Left/Right to move, Up to jump and wall jump, Down to slide (while running) or smash (while in air). Simple but precise controls for fluid parkour movement.'
         },
         {
           question: 'How many levels are there in OVO?',
-          answer: 'OVO features multiple challenging levels with increasing difficulty. New levels are regularly added to keep the gameplay fresh.'
+          answer: 'OVO features 40+ challenging levels, including bonus and secret stages. Each level introduces new mechanics like moving platforms, spikes, teleports, and gravity changes.'
+        },
+        {
+          question: 'Can I save my progress in OVO?',
+          answer: 'Yes! Your OVO progress is automatically saved in your browser. You can close the game and return later to continue where you left off.'
+        },
+        {
+          question: 'What character customization options are available?',
+          answer: 'Collect bonus coins throughout levels to unlock various character skins. You can become an alien, watermelon, or other fun characters on the main menu.'
+        },
+        {
+          question: 'Is OVO suitable for beginners?',
+          answer: 'While OVO starts with manageable difficulty, it becomes quite challenging. The game is perfect for both casual players and speedrunners, with smooth learning curve.'
         },
         {
           question: 'Can I play OVO on mobile devices?',
-          answer: 'Yes! OVO is optimized for both desktop and mobile devices. Touch controls are available for mobile players.'
+          answer: 'OVO works in mobile browsers, but it\'s best experienced with a keyboard on desktop for precise parkour controls. The game is optimized for keyboard input.'
         },
         {
-          question: 'What makes OVO different from other parkour games?',
-          answer: 'OVO features unique physics-based movement, creative level design, and smooth gameplay that emphasizes skill and precision over luck.'
+          question: 'What makes OVO\'s parkour unique?',
+          answer: 'OVO combines fluid movement mechanics with precise platforming. The wall-jumping, sliding, and smashing system creates satisfying parkour flow that appeals to both casual and hardcore players.'
         },
         {
-          question: 'Are there any tips for beginners?',
-          answer: 'Start by mastering basic movements, take your time to learn each obstacle type, and don\'t be afraid to restart levels to improve your technique.'
-        },
-        {
-          question: 'Is OVO free to play?',
-          answer: 'Yes, OVO is completely free to play in your browser. No downloads or installations required.'
+          question: 'Is OVO completely free?',
+          answer: 'Yes! OVO Unblocked is completely free to play in your browser with no downloads, registration, or hidden costs required.'
         }
       ]
     }
@@ -187,7 +226,8 @@ export const GAME_TAGS: GameTag[] = [
   'Memory', 'Cards', 'Classic', 'Arcade', 'Retro', 'Logic', 'Quick', 
   'Vocabulary', 'Letters', 'Brain', 'Colors', 'Matching', 'Visual', 
   'Math', 'Numbers', 'Learning', 'Relaxing', 'Fun', 'Chess', 'Strategy', 
-  'Sliding', 'Speed', 'Cars', 'Racing', 'Parkour', 'Platform', 'Skill'
+  'Sliding', 'Speed', 'Cars', 'Racing', 'Parkour', 'Platform', 'Skill',
+  'Drawing', 'Animation', 'Creative', 'Art'
 ]
 
 export const GAME_DIFFICULTIES: (GameDifficulty | 'All')[] = [
@@ -196,6 +236,6 @@ export const GAME_DIFFICULTIES: (GameDifficulty | 'All')[] = [
 
 // 首页游戏配置
 export const HOMEPAGE_GAME = {
-  id: 3, // Number Guessing Game
-  component: 'NumberGuessingGame'
+  id: 1, // WigglyPaint
+  component: 'WigglyPaint'
 }

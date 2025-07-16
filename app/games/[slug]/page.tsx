@@ -18,20 +18,20 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   
   if (!game) {
     return {
-      title: 'Game Not Found - Fun Online Games',
+      title: 'Game Not Found - WigglyPaint',
       description: 'The requested game was not found.'
     }
   }
 
   return {
-    title: `${game.title} - Free Online Game | Fun Online Games`,
-    description: `Play ${game.title} for free! ${game.description} No downloads required. ${game.category} game with ${game.difficulty} difficulty.`,
+    title: `${game.title} - Animated Drawing & Creative Game | WigglyPaint`,
+    description: `${game.description} Free online tool with living, wiggly lines that bring your art to life! No downloads required.`,
     keywords: `${game.title}, free game, online game, ${game.category.toLowerCase()}, ${game.tags.join(', ').toLowerCase()}, browser game`,
     openGraph: {
-      title: `${game.title} - Free Online Game`,
-      description: `Play ${game.title} for free! ${game.description}`,
-      url: `https://funonlinegames.com/games/${params.slug}`,
-      siteName: 'Fun Online Games',
+      title: `${game.title} - Animated Drawing Tool | WigglyPaint`,
+      description: `${game.description} Create living, wiggly art that moves and breathes!`,
+      url: `https://wigglypaint.co/games/${params.slug}`,
+      siteName: 'WigglyPaint',
       images: [
         {
           url: '/og-image.png',
@@ -44,12 +44,12 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${game.title} - Free Online Game`,
-      description: `Play ${game.title} for free! ${game.description}`,
+      title: `${game.title} - Animated Drawing Tool | WigglyPaint`,
+      description: `${game.description} Create living, wiggly art that moves!`,
       images: ['/twitter-image.png'],
     },
     alternates: {
-      canonical: `https://funonlinegames.com/games/${params.slug}`,
+      canonical: `https://wigglypaint.co/games/${params.slug}`,
     },
   }
 }
@@ -65,7 +65,7 @@ export default function GamePage({ params }: { params: { slug: string } }) {
       <Header />
 
       {/* 主要内容区域 */}
-      <main className="max-w-7xl mx-auto px-4 py-6 sm:px-6 sm:py-8">
+      <main className="max-w-none mx-auto px-4 py-6 sm:px-6 sm:py-8" style={{ maxWidth: '96rem' }}>
         <div className="flex flex-col lg:flex-row lg:gap-8">
           {/* 左侧广告位 - 桌面端 */}
           <div className="hidden lg:block lg:w-48 flex-shrink-0">
@@ -79,16 +79,17 @@ export default function GamePage({ params }: { params: { slug: string } }) {
             {/* 游戏主内容 */}
             <div className="mb-6 sm:mb-8">
               {game.type === 'iframe' && game.url ? (
-                <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div className="bg-white rounded-xl shadow-lg overflow-hidden max-w-5xl mx-auto">
                   {/* 游戏iframe */}
-                  <div className="relative">
+                  <div className="relative overflow-hidden">
                     <iframe
                       src={game.url}
-                      className="w-full h-[400px] sm:h-[500px] lg:h-[600px] border-0"
+                      className="w-full h-[600px] border-0"
                       title={game.title}
                       allowFullScreen
                       loading="lazy"
                       id="game-iframe"
+                      style={{ transform: 'scale(1.75)', transformOrigin: 'center' }}
                     />
                   </div>
                   

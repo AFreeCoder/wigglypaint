@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://funonlinegames.com/sitemap.xml
+Sitemap: https://wigglypaint.co/sitemap.xml
 
 # Crawl delay for respectful crawling
 Crawl-delay: 1

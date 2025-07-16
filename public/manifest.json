@@ -1,7 +1,7 @@
 {
-  "name": "Fun Online Games",
-  "short_name": "Fun Games",
-  "description": "Play the best free online games including puzzles, arcade games, and strategy games",
+  "name": "WigglyPaint",
+  "short_name": "WigglyPaint",
+  "description": "Create amazing wiggly paintings and animations with dynamic drawing tools",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
@@ -9,7 +9,7 @@
   "orientation": "portrait-primary",
   "scope": "/",
   "lang": "en",
-  "categories": ["games", "entertainment"],
+  "categories": ["creativity", "art", "entertainment"],
   "icons": [
     {
       "src": "/icon-192x192.png",

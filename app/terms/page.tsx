@@ -22,7 +22,7 @@ export default function TermsOfService() {
             <section>
               <h2 className="text-2xl font-bold text-gray-800 mb-4">1. Acceptance of Terms</h2>
               <p className="text-gray-600 leading-relaxed mb-4">
-                By accessing and using Fun Online Games ("the Website"), you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.
+                By accessing and using WigglyPaint ("the Website"), you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.
               </p>
               <p className="text-gray-600 leading-relaxed">
                 These Terms of Service ("Terms") govern your use of our website and services. Please read these Terms carefully before using our website.
@@ -33,7 +33,7 @@ export default function TermsOfService() {
             <section>
               <h2 className="text-2xl font-bold text-gray-800 mb-4">2. Description of Service</h2>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Fun Online Games provides free online games and entertainment content. Our services include:
+                WigglyPaint provides creative drawing and painting tools and entertainment content. Our services include:
               </p>
               <ul className="list-disc list-inside text-gray-600 space-y-2 ml-4">
                 <li>Access to various online games and puzzles</li>
@@ -73,7 +73,7 @@ export default function TermsOfService() {
             <section>
               <h2 className="text-2xl font-bold text-gray-800 mb-4">4. Intellectual Property Rights</h2>
               <p className="text-gray-600 leading-relaxed mb-4">
-                All content on this website, including but not limited to games, graphics, text, logos, and software, is the property of Fun Online Games or its content suppliers and is protected by copyright, trademark, and other intellectual property laws.
+                All content on this website, including but not limited to creative tools, graphics, text, logos, and software, is the property of WigglyPaint or its content suppliers and is protected by copyright, trademark, and other intellectual property laws.
               </p>
               <p className="text-gray-600 leading-relaxed mb-4">
                 You may not:
@@ -113,7 +113,7 @@ export default function TermsOfService() {
 
               <h3 className="text-xl font-semibold text-gray-700 mb-3">6.3 Limitation of Liability</h3>
               <p className="text-gray-600 leading-relaxed mb-4">
-                To the maximum extent permitted by law, Fun Online Games shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, data, or use, arising out of or relating to your use of our website.
+                To the maximum extent permitted by law, WigglyPaint shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, data, or use, arising out of or relating to your use of our website.
               </p>
 
               <div className="bg-red-50 border border-red-200 rounded-lg p-4">
@@ -198,7 +198,7 @@ export default function TermsOfService() {
               </p>
               <div className="bg-gray-50 rounded-lg p-4">
                 <p className="text-gray-700">
-                  <strong>Email:</strong> legal@funonlinegames.com<br />
+                  <strong>Email:</strong> [Contact information coming soon]<br />
                   <strong>Address:</strong> [Your Business Address]<br />
                   <strong>Response Time:</strong> We will respond to your inquiry within 30 days
                 </p>

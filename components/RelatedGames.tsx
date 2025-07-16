@@ -70,14 +70,14 @@ export default function RelatedGames({ enabled = true }: RelatedGamesProps) {
         
         <div className="mt-6 text-center">
           <p className="text-gray-500 text-sm mb-3">
-            🌟 Discover hundreds of games in our collection
+            🎨 More creative experiences await you!
           </p>
-          <button 
+          {/* <button 
             onClick={() => router.push('/games')}
             className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-full font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"
           >
             Explore All Games
-          </button>
+          </button> */}
         </div>
       </div>
     )
@@ -150,14 +150,14 @@ export default function RelatedGames({ enabled = true }: RelatedGamesProps) {
       
       <div className="mt-6 text-center">
         <p className="text-gray-500 text-sm mb-3">
-          🌟 Discover hundreds of games in our collection
+          🎨 More creative experiences await you!
         </p>
-        <button 
+        {/* <button 
           onClick={() => router.push('/games')}
           className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-full font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"
         >
           Explore All Games
-        </button>
+        </button> */}
       </div>
     </div>
   )
