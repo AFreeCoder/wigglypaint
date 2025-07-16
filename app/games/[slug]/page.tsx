@@ -13,8 +13,9 @@ import { getGameBySlug, getCategoryColor, getDifficultyColor, renderStars } from
 import Link from 'next/link'
 
 // 生成动态metadata，优化SEO
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const game = getGameBySlug(params.slug)
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params
+  const game = getGameBySlug(slug)
   
   if (!game) {
     return {
@@ -30,7 +31,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     openGraph: {
       title: `${game.title} - Animated Drawing Tool | WigglyPaint`,
       description: `${game.description} Create living, wiggly art that moves and breathes!`,
-      url: `https://wigglypaint.co/games/${params.slug}`,
+      url: `https://wigglypaint.co/games/${slug}`,
       siteName: 'WigglyPaint',
       images: [
         {
@@ -49,14 +50,15 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       images: ['/twitter-image.png'],
     },
     alternates: {
-      canonical: `https://wigglypaint.co/games/${params.slug}`,
+      canonical: `https://wigglypaint.co/games/${slug}`,
     },
   }
 }
 
 
-export default function GamePage({ params }: { params: { slug: string } }) {
-  const game = getGameBySlug(params.slug)
+export default async function GamePage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const game = getGameBySlug(slug)
   if (!game) return notFound()
 
   return (
