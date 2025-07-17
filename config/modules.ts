@@ -21,7 +21,7 @@ export const MODULE_CONFIG = {
 
   // Google Analytics 配置
   // 填写您的 Google Analytics ID，例如 'G-XXXXXXXXXX'，不需要则留空
-  GA_ID: '',
+  GA_ID: 'G-NKM2EZG7CJ',
 }
 
 // 使用示例：
