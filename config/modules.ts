@@ -10,7 +10,7 @@ export const MODULE_CONFIG = {
   BOTTOM_AD: false,
   
   // 相关游戏推荐
-  RELATED_GAMES: false,
+  RELATED_GAMES: true,
   
   // 游戏信息说明
   GAME_INFO: true,

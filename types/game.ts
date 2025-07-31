@@ -38,6 +38,7 @@ export interface Game {
   slug?: string // 自动生成的URL slug
   url?: string // 游戏URL（用于iframe嵌入）
   type?: 'local' | 'iframe' // 游戏类型
+  scale?: number // iframe缩放比例，默认为1
   gameInfo?: GameInfo // 游戏详细信息配置
 }
 

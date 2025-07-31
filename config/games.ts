@@ -13,7 +13,8 @@ export const GAMES: Game[] = [
     rating: 4.5,
     playCount: '12.5K',
     type: 'iframe',
-    url: 'https://r2.wigglypaint.co/WigglyPainthtml',
+    url: 'https://r2.wigglypaint.co/WigglyPaint.html',
+    scale: 1.65,
     gameInfo: {
       introduction: {
         title: 'WigglyPaint: The Living Drawing Tool',
@@ -118,93 +119,116 @@ export const GAMES: Game[] = [
   {
     id: 2,
     title: 'OVO Unblocked',
-    description: 'Master fluid parkour movements in this fast-paced platformer with 40+ challenging levels',
+    description: 'Master precision parkour in this addictive platformer! Navigate through 40+ skill-building levels with fluid movement mechanics that support problem-solving and perseverance.',
     image: '🏃',
     category: 'Arcade',
-    tags: ['Parkour', 'Platform', 'Skill', 'Speed'],
+    tags: ['Parkour', 'Platform', 'Speed'],
     difficulty: 'Medium',
     players: '1 Player',
     rating: 4.8,
     playCount: '45.6K',
     type: 'iframe',
-    url: 'https://joyhubcentral.com/games/ovo-unblocked/?v=20250316163142',
+    url: 'https://r2.wigglypaint.co/ovo-unblocked.html',
     gameInfo: {
       introduction: {
-        title: 'OVO Parkour Mastery',
-        description: 'Take control of a stickman character in this fluid parkour platformer! Navigate through 40+ challenging levels filled with traps, obstacles, and moving platforms. Master wall-jumping, sliding, and smashing techniques to overcome increasingly complex parkour challenges.',
+        title: 'OVO Unblocked: The Ultimate Precision Parkour Challenge',
+        description: 'Experience the thrill of fluid parkour movement in OVO Unblocked! This addictive OVO Unblocked platformer challenges players to master precise controls while navigating through 40+ expertly crafted levels. Perfect for developing problem-solving skills and perseverance, OVO Unblocked transforms every jump, slide, and wall-climb into a satisfying victory. Whether you\'re a casual gamer or speedrunner, OVO Unblocked delivers endless entertainment with its smooth movement mechanics and progressive difficulty curve.',
         features: [
           {
             icon: '🏃',
-            title: 'Fluid Parkour Movement',
-            description: 'Experience smooth running, jumping, wall-jumping, sliding, and smashing mechanics'
+            title: 'Fluid OVO Unblocked Movement',
+            description: 'Master smooth running, jumping, wall-jumping, sliding, and smashing mechanics in OVO Unblocked that feel natural and responsive'
           },
           {
             icon: '🎯',
-            title: '40+ Challenging Levels',
-            description: 'Progress through diverse levels with spikes, teleports, moving platforms, and gravity changes'
+            title: '40+ Progressive OVO Unblocked Levels',
+            description: 'Navigate expertly designed OVO Unblocked levels with spikes, teleports, moving platforms, and gravity changes that build skills incrementally'
           },
           {
             icon: '⚡',
-            title: 'Fast-Paced Precision',
-            description: 'Test your reflexes and timing in this demanding platformer experience'
+            title: 'Skill-Building Precision',
+            description: 'Develop problem-solving abilities and perseverance through challenging platformer gameplay that rewards practice'
+          },
+          {
+            icon: '🧠',
+            title: 'Educational OVO Unblocked Value',
+            description: 'OVO Unblocked supports Common Core mathematical practices including problem-solving, reasoning, and strategic thinking'
           },
           {
             icon: '🎨',
             title: 'Character Customization',
-            description: 'Collect bonus coins to unlock unique skins and character appearances'
+            description: 'Collect bonus coins to unlock unique skins including alien, watermelon, and other creative character appearances'
+          },
+          {
+            icon: '📱',
+            title: 'Cross-Platform OVO Unblocked Access',
+            description: 'Play OVO Unblocked instantly on desktop or mobile with no downloads required - perfect for quick gaming sessions anywhere'
           }
         ]
       },
       howToPlay: {
-        title: 'How to Master OVO Parkour',
+        title: 'Master OVO Unblocked: From Beginner to Parkour Pro',
         steps: [
-          { step: 1, icon: '←→', title: 'Basic Movement', description: 'Use left and right arrow keys to move your stickman character' },
-          { step: 2, icon: '↑', title: 'Jump & Wall Jump', description: 'Press Up arrow to jump. While sliding down a wall, tap Up to wall jump' },
-          { step: 3, icon: '⬇', title: 'Slide & Smash', description: 'Press Down while running to slide under obstacles, or while airborne to smash through platforms' },
-          { step: 4, icon: '🎯', title: 'Master Timing', description: 'Perfect your timing for spikes, moving platforms, and teleports' },
-          { step: 5, icon: '🪙', title: 'Collect Coins', description: 'Grab bonus coins throughout levels to unlock character skins' },
-          { step: 6, icon: '🏁', title: 'Complete Levels', description: 'Navigate through 40+ increasingly challenging parkour levels' }
+          { step: 1, icon: '🎮', title: 'Get Started with OVO Unblocked', description: 'Launch OVO Unblocked in your browser - no downloads or registration required. OVO Unblocked loads quickly on any device!' },
+          { step: 2, icon: '←→', title: 'Basic Movement', description: 'Use left and right arrow keys to move your stickman character smoothly across platforms' },
+          { step: 3, icon: '↑', title: 'Jump & Wall Jump', description: 'Press Up arrow to jump over obstacles. While sliding down a wall, quickly tap Up to perform wall jumps for advanced navigation' },
+          { step: 4, icon: '⬇', title: 'Slide & Smash Techniques', description: 'Press Down while running to slide under low obstacles, or while airborne to smash through transparent platforms and barriers' },
+          { step: 5, icon: '🎯', title: 'Master Advanced Timing', description: 'Perfect your timing for spikes, moving platforms, teleports, and gravity-defying sections that test your reflexes' },
+          { step: 6, icon: '🪙', title: 'Collect & Customize', description: 'Grab bonus coins scattered throughout levels to unlock unique character skins like alien, watermelon, and more creative designs' },
+          { step: 7, icon: '🏆', title: 'Progress in OVO Unblocked', description: 'Challenge yourself through 40+ OVO Unblocked levels that gradually build your parkour skills and problem-solving abilities' },
+          { step: 8, icon: '⚡', title: 'OVO Unblocked Speedrun Mastery', description: 'Once comfortable with OVO Unblocked, attempt speedruns to perfect your movement flow and compete for faster completion times' }
         ],
         tips: [
-          'Combine wall jumping with sliding for advanced movement techniques',
-          'Use momentum from running to make longer jumps',
-          'Smash move (Down in air) helps pass through transparent platforms',
-          'Practice makes perfect - levels get progressively more challenging',
-          'Your progress automatically saves in the browser'
+          'Combine wall jumping with sliding for fluid advanced movement chains that maintain momentum',
+          'Build up running speed before jumps to achieve maximum distance and clear larger gaps',
+          'Master the smash move (Down while airborne) to break through transparent platforms strategically',
+          'Study level layouts before rushing - patience and planning often beat pure speed',
+          'Practice difficult sections repeatedly - muscle memory is key to mastering precise platforming',
+          'Use the checkpoint system wisely - your progress automatically saves between sessions',
+          'Experiment with different movement combinations to discover your personal playstyle',
+          'Watch for visual cues that indicate interactive elements like breakable platforms or teleports'
         ]
       },
       faq: [
         {
-          question: 'What are the controls for OVO?',
-          answer: 'Use arrow keys to control your character: Left/Right to move, Up to jump and wall jump, Down to slide (while running) or smash (while in air). Simple but precise controls for fluid parkour movement.'
+          question: 'What are the controls for OVO Unblocked?',
+          answer: 'OVO Unblocked uses intuitive arrow key controls: Left/Right to move, Up to jump and wall jump, Down to slide (while running) or smash (while airborne). These simple yet precise OVO Unblocked controls enable fluid parkour movement that feels natural and responsive.'
         },
         {
-          question: 'How many levels are there in OVO?',
-          answer: 'OVO features 40+ challenging levels, including bonus and secret stages. Each level introduces new mechanics like moving platforms, spikes, teleports, and gravity changes.'
+          question: 'How many levels are in OVO Unblocked and what makes them educational?',
+          answer: 'OVO Unblocked features 40+ expertly crafted levels that progressively build problem-solving skills and perseverance. Each OVO Unblocked level introduces new mechanics like moving platforms, spikes, teleports, and gravity changes, supporting Common Core mathematical practices through strategic thinking and spatial reasoning.'
         },
         {
-          question: 'Can I save my progress in OVO?',
-          answer: 'Yes! Your OVO progress is automatically saved in your browser. You can close the game and return later to continue where you left off.'
+          question: 'Does OVO Unblocked save my progress automatically?',
+          answer: 'Yes! Your OVO Unblocked progress is automatically saved in your browser with no account required. You can close OVO Unblocked anytime and return later to continue exactly where you left off, making it perfect for quick gaming sessions or extended play.'
         },
         {
-          question: 'What character customization options are available?',
-          answer: 'Collect bonus coins throughout levels to unlock various character skins. You can become an alien, watermelon, or other fun characters on the main menu.'
+          question: 'What character customization options does OVO Unblocked offer?',
+          answer: 'Collect bonus coins scattered throughout OVO Unblocked levels to unlock unique character skins including alien, watermelon, and other creative designs. This OVO Unblocked reward system motivates exploration and adds replay value to completed levels.'
         },
         {
-          question: 'Is OVO suitable for beginners?',
-          answer: 'While OVO starts with manageable difficulty, it becomes quite challenging. The game is perfect for both casual players and speedrunners, with smooth learning curve.'
+          question: 'Is OVO Unblocked suitable for different skill levels?',
+          answer: 'Absolutely! OVO Unblocked starts with manageable difficulty to welcome beginners, then gradually increases complexity. This progressive OVO Unblocked learning curve makes it perfect for casual players developing skills, while advanced mechanics satisfy speedrunners and parkour enthusiasts.'
         },
         {
-          question: 'Can I play OVO on mobile devices?',
-          answer: 'OVO works in mobile browsers, but it\'s best experienced with a keyboard on desktop for precise parkour controls. The game is optimized for keyboard input.'
+          question: 'Can I play OVO Unblocked on mobile devices and tablets?',
+          answer: 'OVO Unblocked works on mobile browsers and tablets, though OVO Unblocked is optimized for keyboard controls on desktop. The responsive design ensures OVO Unblocked playability across devices, but precision parkour gameplay is most enjoyable with arrow key input.'
         },
         {
-          question: 'What makes OVO\'s parkour unique?',
-          answer: 'OVO combines fluid movement mechanics with precise platforming. The wall-jumping, sliding, and smashing system creates satisfying parkour flow that appeals to both casual and hardcore players.'
+          question: 'What educational benefits does OVO Unblocked provide?',
+          answer: 'OVO Unblocked develops critical thinking, spatial reasoning, and perseverance through its challenging platformer gameplay. OVO Unblocked supports Common Core mathematical practices by requiring players to analyze problems, develop strategies, and persist through difficult sections.'
         },
         {
-          question: 'Is OVO completely free?',
-          answer: 'Yes! OVO Unblocked is completely free to play in your browser with no downloads, registration, or hidden costs required.'
+          question: 'How does OVO Unblocked\'s parkour system work?',
+          answer: 'OVO Unblocked combines fluid movement mechanics with precise platforming challenges. The OVO Unblocked wall-jumping, sliding, and smashing system creates satisfying parkour flow that rewards timing, planning, and skill development. Advanced OVO Unblocked players can chain movements for speedrun techniques.'
+        },
+        {
+          question: 'Is OVO completely free to play?',
+          answer: 'Yes! OVO Unblocked is 100% free with no hidden costs, downloads, or registration required. Play instantly in your browser with unlimited access to all levels, features, and customization options.'
+        },
+        {
+          question: 'What makes OVO Unblocked different from other platformer games?',
+          answer: 'OVO Unblocked stands out with its perfect balance of accessibility and depth. OVO Unblocked combines educational value with engaging gameplay, featuring smooth parkour mechanics, progressive skill-building, and instant browser-based access. OVO Unblocked is designed to be both entertaining and intellectually rewarding.'
         }
       ]
     }

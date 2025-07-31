@@ -14,9 +14,9 @@ export default function Header() {
         
         {/* 右侧导航链接 */}
         <div className="flex items-center space-x-4">
-          {/* <Link href="/games" className="text-blue-600 hover:text-blue-700 font-semibold text-sm">
+          <Link href="/games" className="text-blue-600 hover:text-blue-700 font-semibold text-sm">
             All Games
-          </Link> */}
+          </Link>
           <Link href="/" className="text-gray-600 hover:text-gray-800 font-semibold text-sm">
             Home
           </Link>

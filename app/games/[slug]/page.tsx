@@ -91,7 +91,10 @@ export default async function GamePage({ params }: { params: Promise<{ slug: str
                       allowFullScreen
                       loading="lazy"
                       id="game-iframe"
-                      style={{ transform: 'scale(1.75)', transformOrigin: 'center' }}
+                      style={{ 
+                        transform: `scale(${game.scale || 1})`, 
+                        transformOrigin: 'center' 
+                      }}
                     />
                   </div>
                   

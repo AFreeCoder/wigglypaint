@@ -50,7 +50,10 @@ export default function Game({ gameId }: GameProps) {
             allowFullScreen
             loading="lazy"
             id="homepage-game-iframe"
-            style={{ transform: 'scale(1.6)', transformOrigin: 'center' }}
+            style={{ 
+              transform: `scale(${gameConfig.scale || 1})`, 
+              transformOrigin: 'center' 
+            }}
           />
         </div>
         
