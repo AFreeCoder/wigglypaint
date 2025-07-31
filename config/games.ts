@@ -247,10 +247,7 @@ export const GAME_CATEGORIES: (GameCategory | 'All')[] = [
 ]
 
 export const GAME_TAGS: GameTag[] = [
-  'Memory', 'Cards', 'Classic', 'Arcade', 'Retro', 'Logic', 'Quick', 
-  'Vocabulary', 'Letters', 'Brain', 'Colors', 'Matching', 'Visual', 
-  'Math', 'Numbers', 'Learning', 'Relaxing', 'Fun', 'Chess', 'Strategy', 
-  'Sliding', 'Speed', 'Cars', 'Racing', 'Parkour', 'Platform', 'Skill',
+  'Speed', 'Cars', 'Racing', 'Parkour', 'Platform', 'Skill',
   'Drawing', 'Animation', 'Creative', 'Art'
 ]
 
