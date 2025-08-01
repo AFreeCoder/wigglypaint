@@ -7,7 +7,7 @@ export const GAMES: Game[] = [
     description: 'Draw with 8 animated brushes that create wiggly, jiggly lines with personality! Free online pixel art & GIF maker with living, breathing lines.',
     image: '🎨',
     category: 'Casual',
-    tags: ['Drawing', 'Animation', 'Creative', 'Art'],
+    tags: ['Drawing', 'Animation', 'Creative', 'Pixel Art'],
     difficulty: 'Easy',
     players: '1 Player',
     rating: 4.5,
@@ -232,6 +232,123 @@ export const GAMES: Game[] = [
         }
       ]
     }
+  },
+  {
+    id: 3,
+    title: 'Make Pixel Art Online - Pixilart.com',
+    description: 'Create Pixel Art Online with this powerful digital art tool. Make Pixel Art Online sprites, GIF animations, and join 2M+ artists to collaborate, share, and explore Pixel Art Online creativity.',
+    image: '🎮',
+    category: 'Casual',
+    tags: ['Drawing', 'Pixel Art', 'Creative', 'Animation'],
+    difficulty: 'Easy',
+    players: '1 Player',
+    rating: 4.7,
+    playCount: '2.1M',
+    type: 'iframe',
+    url: 'https://www.pixilart.com/draw',
+    gameInfo: {
+      introduction: {
+        title: 'Pixilart: The Ultimate Pixel Art Online Creation Platform',
+        description: 'Discover the world of Pixel Art Online with Pixilart - a comprehensive platform where you can Make Pixel Art Online, design gaming sprites, and produce animated GIFs. Join over 2 million artists in this vibrant Pixel Art Online community where creativity meets collaboration. Whether you\'re a beginner or professional artist making Pixel Art Online, Pixilart provides all the tools you need to bring your Pixel Art Online visions to life.',
+        features: [
+          {
+            icon: '🎨',
+            title: 'Professional Drawing Tools',
+            description: 'Access professional Pixel Art Online tools including brushes, layers, color palettes, and advanced editing features for creating Pixel Art Online masterpieces'
+          },
+          {
+            icon: '🎮',
+            title: 'Gaming Sprite Creation',
+            description: 'Design pixel-perfect sprites for games with specialized Pixel Art Online tools and templates optimized for Pixel Art Online game development'
+          },
+          {
+            icon: '🎬',
+            title: 'GIF Animation Studio',
+            description: 'Create animated Pixel Art Online GIFs with frame-by-frame animation tools and timeline controls for smooth Pixel Art Online motion graphics'
+          },
+          {
+            icon: '👥',
+            title: 'Active Art Community',
+            description: 'Connect with over 2 million artists, share your creations, get feedback, and collaborate on projects'
+          },
+          {
+            icon: '📱',
+            title: 'Cross-Platform Access',
+            description: 'Create art seamlessly across desktop and mobile devices with cloud synchronization'
+          },
+          {
+            icon: '🎯',
+            title: 'Art Challenges & Contests',
+            description: 'Participate in community challenges, contests, and themed art events to showcase your skills'
+          }
+        ]
+      },
+      howToPlay: {
+        title: 'Master Pixel Art Online Creation with Pixilart',
+        steps: [
+          { step: 1, icon: '🚀', title: 'Start Creating', description: 'Visit pixilart.com/draw to launch the Pixel Art Online drawing tool instantly in your browser' },
+          { step: 2, icon: '🎨', title: 'Choose Your Canvas', description: 'Select canvas size and resolution perfect for your Pixel Art Online project - sprites, or animations' },
+          { step: 3, icon: '🖌️', title: 'Select Drawing Tools', description: 'Pick from brushes, pencils, fill tools, and specialized Pixel Art Online tools with customizable settings' },
+          { step: 4, icon: '🎨', title: 'Create Your Art', description: 'Make Pixel Art Online pixel by pixel or use advanced tools to create Pixel Art Online masterpieces with layers and effects' },
+          { step: 5, icon: '📚', title: 'Use Layers', description: 'Organize your artwork with multiple layers for complex compositions and easy editing' },
+          { step: 6, icon: '🎬', title: 'Animate Your Art', description: 'Create frame-by-frame animations and export them as GIFs for dynamic visual content' },
+          { step: 7, icon: '💾', title: 'Save & Share', description: 'Save your creations to your profile and share them with the Pixilart community for feedback' },
+          { step: 8, icon: '🌟', title: 'Join the Community', description: 'Follow other artists, participate in challenges, and build your reputation in the art community' }
+        ],
+        tips: [
+          'Start with smaller canvas sizes to learn Pixel Art Online fundamentals before tackling complex Pixel Art Online projects',
+          'Use the grid feature to align pixels perfectly and create clean, professional-looking Pixel Art Online artwork',
+          'Experiment with different color palettes - limited colors often create more impactful Pixel Art Online',
+          'Study existing Pixel Art Online and sprites in the gallery for Pixel Art Online inspiration and technique learning',
+          'Join art challenges to practice specific styles and connect with other community members',
+          'Save your work frequently and use layers to separate different elements of your artwork',
+          'Practice animation timing - start with simple movements before attempting complex animations',
+          'Engage with the community by commenting on and favoriting others\' artwork'
+        ]
+      },
+      faq: [
+        {
+          question: 'What makes Pixilart different from other Pixel Art Online drawing tools?',
+          answer: 'Pixilart specializes in Pixel Art Online and digital art creation with tools specifically designed for gaming sprites, animations, and pixel-perfect Pixel Art Online artwork. With over 2 million active users, it combines professional-grade Pixel Art Online tools with a vibrant artistic community.'
+        },
+        {
+          question: 'Can I create animations and GIFs with Pixilart?',
+          answer: 'Yes! Pixilart includes a full Pixel Art Online animation studio with frame-by-frame editing, timeline controls, and GIF export capabilities. You can create smooth Pixel Art Online animations and export them as high-quality GIFs perfect for social media and web use.'
+        },
+        {
+          question: 'Is Pixilart suitable for game development?',
+          answer: 'Absolutely! Pixilart is widely used by game developers for creating Pixel Art Online sprites, tiles, and game assets. The Pixel Art Online tools and export options make it ideal for 2D game development across all platforms.'
+        },
+        {
+          question: 'Do I need to sign up to use Pixilart?',
+          answer: 'You can start making Pixel Art Online immediately without an account, but signing up unlocks additional features like saving Pixel Art Online artwork, joining the community, participating in challenges, and accessing your Pixel Art Online library across devices.'
+        },
+        {
+          question: 'How does the Pixilart community work?',
+          answer: 'The Pixilart community allows artists to share their work, get feedback, follow other creators, and participate in art challenges. It\'s a supportive environment where artists of all skill levels can learn and grow together.'
+        },
+        {
+          question: 'What file formats can I export from Pixilart?',
+          answer: 'Pixilart supports multiple export formats including PNG, JPG, GIF for animations, and various Pixel Art Online specific formats. You can also export Pixel Art Online sprites in formats optimized for game engines.'
+        },
+        {
+          question: 'Is Pixilart free to use?',
+          answer: 'Pixilart offers a robust free tier with full access to drawing tools and community features. Premium subscriptions unlock additional storage, advanced features, and priority support.'
+        },
+        {
+          question: 'Can I collaborate with other artists on Pixilart?',
+          answer: 'Yes! Pixilart supports collaborative projects where multiple artists can work together on artwork. The community features also enable sharing techniques, getting feedback, and learning from others.'
+        },
+        {
+          question: 'What devices and browsers support Pixilart?',
+          answer: 'Pixilart works on all modern browsers across desktop, tablet, and mobile devices. The HTML5-based platform ensures compatibility across Windows, Mac, iOS, and Android systems.'
+        },
+        {
+          question: 'Are there tutorials or learning resources available?',
+          answer: 'Pixilart provides tutorials, community guides, and educational content to help artists improve their skills. The active community also shares tips, techniques, and feedback to support learning.'
+        }
+      ]
+    }
   }
 ]
 
@@ -248,7 +365,7 @@ export const GAME_CATEGORIES: (GameCategory | 'All')[] = [
 
 export const GAME_TAGS: GameTag[] = [
   'Speed', 'Cars', 'Racing', 'Parkour', 'Platform', 'Skill',
-  'Drawing', 'Animation', 'Creative', 'Art'
+  'Drawing', 'Animation', 'Creative', 'Pixel Art'
 ]
 
 export const GAME_DIFFICULTIES: (GameDifficulty | 'All')[] = [

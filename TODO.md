@@ -14,7 +14,7 @@
 
 # 相关资源
 
-wigglypaint 游戏html文件：https://r2.wigglypaint.co/WigglyPainthtml
+wigglypaint 游戏html文件：https://r2.wigglypaint.co/WigglyPaint.html
 
 # 网站要素
 
