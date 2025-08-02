@@ -1,4 +1,42 @@
-import { Game, GameCategory, GameTag, GameDifficulty } from '@/types/game'
+// 先定义配置数组
+export const GAME_CATEGORIES = [
+  'All', 'Puzzle', 'Arcade', 'Strategy', 'Word', 'Education', 'Casual', 'Racing'
+] as const
+
+export const GAME_TAGS = [
+  'Speed', 'Cars', 'Racing', 'Parkour', 'Platform', 'Skill',
+  'Drawing', 'Animation', 'Creative', 'Pixel Art'
+] as const
+
+export const GAME_DIFFICULTIES = [
+  'All', 'Easy', 'Medium', 'Hard'
+] as const
+
+// 从配置推断类型
+export type GameCategory = Exclude<typeof GAME_CATEGORIES[number], 'All'>
+export type GameTag = typeof GAME_TAGS[number]  
+export type GameDifficulty = Exclude<typeof GAME_DIFFICULTIES[number], 'All'>
+
+// 导入其他类型定义
+import { GameInfo } from '@/types/game'
+
+export interface Game {
+  id: number
+  title: string
+  description: string
+  image: string
+  category: GameCategory
+  tags: GameTag[]
+  difficulty: GameDifficulty
+  players: string
+  rating: number
+  playCount: string
+  slug?: string
+  url?: string
+  type?: 'local' | 'iframe'
+  scale?: number
+  gameInfo?: GameInfo
+}
 
 export const GAMES: Game[] = [
   {
@@ -358,19 +396,6 @@ export const GAMES_WITH_SLUGS = GAMES.map(game => ({
   slug: game.title.toLowerCase().replace(/\s+/g, '-')
 }))
 
-// 导出筛选选项
-export const GAME_CATEGORIES: (GameCategory | 'All')[] = [
-  'All', 'Puzzle', 'Arcade', 'Strategy', 'Word', 'Education', 'Casual', 'Racing'
-]
-
-export const GAME_TAGS: GameTag[] = [
-  'Speed', 'Cars', 'Racing', 'Parkour', 'Platform', 'Skill',
-  'Drawing', 'Animation', 'Creative', 'Pixel Art'
-]
-
-export const GAME_DIFFICULTIES: (GameDifficulty | 'All')[] = [
-  'All', 'Easy', 'Medium', 'Hard'
-]
 
 // 首页游戏配置
 export const HOMEPAGE_GAME = {
