@@ -68,7 +68,7 @@ export default function GamePageLayout({
 
             {/* 热门游戏 */}
             <div className="mb-6 sm:mb-8">
-              <RelatedGames enabled={MODULE_CONFIG.RELATED_GAMES} excludeGameId={game.id} />
+              <RelatedGames enabled={MODULE_CONFIG.POPULAR_GAMES} excludeGameId={game.id} />
             </div>
 
             {/* 游戏信息 */}

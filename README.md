@@ -69,8 +69,10 @@ export const MODULE_CONFIG = {
   RIGHT_AD: true,
   // 底部广告位
   BOTTOM_AD: true,
-  // 相关游戏推荐
-  RELATED_GAMES: true,
+  // 热门游戏推荐
+  POPULAR_GAMES: true,
+  // Try These 快速推荐模块
+  TRY_THESE: true,
   // 游戏信息说明
   GAME_INFO: true,
   // Cookie 同意弹窗（GDPR合规）
@@ -91,7 +93,8 @@ export const MODULE_CONFIG = {
   LEFT_AD: false,        // 隐藏左侧广告位
   RIGHT_AD: true,        // 显示右侧广告位
   BOTTOM_AD: true,       // 显示底部广告位
-  RELATED_GAMES: false,  // 隐藏相关游戏推荐
+  POPULAR_GAMES: false,  // 隐藏热门游戏推荐
+  TRY_THESE: true,       // 显示快速推荐模块
   GAME_INFO: true,       // 显示游戏信息说明
   COOKIE_CONSENT: false, // 不显示Cookie弹窗，默认Accept All
   GA_ID: 'G-XXXXXXXXXX', // 启用 Google Analytics
@@ -105,7 +108,8 @@ export const MODULE_CONFIG = {
 | 左侧广告位 | `LEFT_AD` | 在游戏左侧显示广告位 |
 | 右侧广告位 | `RIGHT_AD` | 在游戏右侧显示广告位 |
 | 底部广告位 | `BOTTOM_AD` | 在游戏下方显示广告位 |
-| 相关游戏推荐 | `RELATED_GAMES` | 显示相关游戏推荐列表 |
+| 热门游戏推荐 | `POPULAR_GAMES` | 显示热门游戏推荐列表 |
+| 快速推荐模块 | `TRY_THESE` | 显示右侧快速推荐模块 |
 | 游戏信息说明 | `GAME_INFO` | 显示游戏简介、玩法和FAQ |
 | Cookie同意弹窗 | `COOKIE_CONSENT` | 是否显示Cookie同意弹窗（GDPR合规）。为false时，默认所有Cookie均被接受（Accept All） |
 | Google Analytics | `GA_ID` | 填写您的 Google Analytics ID（如 G-XXXXXXXXXX），留空则不启用 |
