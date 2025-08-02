@@ -3,6 +3,7 @@
 import Game from '@/components/Game'
 import AdSpace from '@/components/AdSpace'
 import RelatedGames from '@/components/RelatedGames'
+import TryThese from '@/components/TryThese'
 import GameInfo from '@/components/GameInfo'
 import CookieConsent from '@/components/CookieConsent'
 import Footer from '@/components/Footer'
@@ -47,6 +48,11 @@ export default function Home() {
               <Game />
             </div>
 
+            {/* Try These - 移动端 */}
+            <div className="mb-6 sm:mb-8 lg:hidden">
+              <TryThese enabled={MODULE_CONFIG.TRY_THESE} excludeGameId={HOMEPAGE_GAME.id} />
+            </div>
+
             {/* 底部广告位 */}
             <div className="mb-6 sm:mb-8">
               <AdSpace position="bottom" enabled={MODULE_CONFIG.BOTTOM_AD} />
@@ -54,16 +60,17 @@ export default function Home() {
 
             {/* 相关游戏 */}
             <div className="mb-6 sm:mb-8">
-              <RelatedGames enabled={MODULE_CONFIG.RELATED_GAMES} />
+              <RelatedGames enabled={MODULE_CONFIG.RELATED_GAMES} excludeGameId={HOMEPAGE_GAME.id} />
             </div>
 
             {/* 游戏信息 */}
             <GameInfo enabled={MODULE_CONFIG.GAME_INFO} game={homepageGame} />
           </div>
 
-          {/* 右侧广告位 - 桌面端 */}
-          <div className="hidden lg:block lg:w-48 flex-shrink-0">
-            <div className="sticky top-24">
+          {/* 右侧推荐和广告位 - 桌面端 */}
+          <div className="hidden lg:block lg:w-64 flex-shrink-0">
+            <div className="sticky top-24 space-y-6">
+              <TryThese enabled={MODULE_CONFIG.TRY_THESE} excludeGameId={HOMEPAGE_GAME.id} />
               <AdSpace position="right" enabled={MODULE_CONFIG.RIGHT_AD} />
             </div>
           </div>

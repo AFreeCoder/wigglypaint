@@ -109,3 +109,31 @@ export function renderStars(rating: number): React.ReactElement[] {
   }
   return stars
 }
+
+// 获取热门游戏（基于播放次数）
+export function getPopularGames(count: number = 6, excludeId?: number): Game[] {
+  const availableGames = excludeId 
+    ? GAMES_WITH_SLUGS.filter(game => game.id !== excludeId)
+    : GAMES_WITH_SLUGS
+
+  return availableGames
+    .sort((a, b) => {
+      // 将 playCount 字符串转换为数字进行排序
+      const getNumericPlayCount = (playCount: string): number => {
+        const cleanCount = playCount.replace(/[^\d.]/g, '')
+        const num = parseFloat(cleanCount)
+        
+        if (playCount.includes('K')) return num * 1000
+        if (playCount.includes('M')) return num * 1000000
+        return num
+      }
+      
+      return getNumericPlayCount(b.playCount) - getNumericPlayCount(a.playCount)
+    })
+    .slice(0, count)
+}
+
+// 获取简洁的游戏列表（用于右侧推荐）
+export function getQuickPlayGames(count: number = 4, excludeId?: number): Game[] {
+  return getRandomGames(count, excludeId)
+}

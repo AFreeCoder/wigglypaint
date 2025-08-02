@@ -2,25 +2,26 @@
 
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
-import { getRandomGames, getCategoryColor, getDifficultyColor, renderStars } from '@/utils/gameUtils'
+import { getPopularGames, getCategoryColor, getDifficultyColor, renderStars } from '@/utils/gameUtils'
 import { Game } from '@/types/game'
 
 interface RelatedGamesProps {
   enabled?: boolean
+  excludeGameId?: number
 }
 
 
-export default function RelatedGames({ enabled = true }: RelatedGamesProps) {
+export default function RelatedGames({ enabled = true, excludeGameId }: RelatedGamesProps) {
   const [hoveredGame, setHoveredGame] = useState<number | null>(null)
-  const [relatedGames, setRelatedGames] = useState<Game[]>([])
+  const [popularGames, setPopularGames] = useState<Game[]>([])
   const [isLoaded, setIsLoaded] = useState(false)
   const router = useRouter()
 
   useEffect(() => {
-    // 在客户端加载后设置随机游戏，避免SSR不匹配
-    setRelatedGames(getRandomGames(6))
+    // 在客户端加载后设置热门游戏，避免SSR不匹配
+    setPopularGames(getPopularGames(6, excludeGameId))
     setIsLoaded(true)
-  }, [])
+  }, [excludeGameId])
 
   if (!enabled) return null
 
@@ -33,7 +34,7 @@ export default function RelatedGames({ enabled = true }: RelatedGamesProps) {
     return (
       <div className="bg-white rounded-xl shadow-lg p-6">
         <div className="flex items-center justify-between mb-6">
-          <h3 className="text-2xl font-bold text-gray-800">🎮 More Games You'll Love</h3>
+          <h3 className="text-2xl font-bold text-gray-800">🔥 Most Popular Games</h3>
           <button 
             onClick={() => router.push('/games')}
             className="text-blue-600 hover:text-blue-700 text-sm font-semibold transition-colors"
@@ -86,7 +87,7 @@ export default function RelatedGames({ enabled = true }: RelatedGamesProps) {
   return (
     <div className="bg-white rounded-xl shadow-lg p-6">
       <div className="flex items-center justify-between mb-6">
-        <h3 className="text-2xl font-bold text-gray-800">🎮 More Games You'll Love</h3>
+        <h3 className="text-2xl font-bold text-gray-800">🔥 Most Popular Games</h3>
         <button 
           onClick={() => router.push('/games')}
           className="text-blue-600 hover:text-blue-700 text-sm font-semibold transition-colors"
@@ -96,7 +97,7 @@ export default function RelatedGames({ enabled = true }: RelatedGamesProps) {
       </div>
       
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {relatedGames.map((game) => (
+        {popularGames.map((game) => (
           <div
             key={game.id}
             className="group bg-gradient-to-br from-gray-50 to-white rounded-xl p-4 border border-gray-100 hover:border-blue-200 hover:shadow-lg transition-all duration-300 cursor-pointer transform hover:scale-[1.02]"
@@ -150,7 +151,7 @@ export default function RelatedGames({ enabled = true }: RelatedGamesProps) {
       
       <div className="mt-6 text-center">
         <p className="text-gray-500 text-sm mb-3">
-          🎨 More creative experiences await you!
+          🔥 These games are loved by millions!
         </p>
         {/* <button 
           onClick={() => router.push('/games')}
