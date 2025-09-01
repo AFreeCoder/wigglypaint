@@ -32,6 +32,11 @@ export default function Footer() {
                   Terms of Service
                 </Link>
               </li>
+              <li>
+                <a href="https://gameaha.net" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
+                  GameAha
+                </a>
+              </li>
             </ul>
           </div>
 
