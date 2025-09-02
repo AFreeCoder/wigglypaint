@@ -1,7 +1,9 @@
+import type { IframeHTMLAttributes } from 'react'
+
 export type IframePolicy = {
   allow: string
   sandbox?: string
-  referrerPolicy?: string
+  referrerPolicy?: IframeHTMLAttributes<HTMLIFrameElement>['referrerPolicy']
 }
 
 export const DEFAULT_IFRAME_POLICY: IframePolicy = {
