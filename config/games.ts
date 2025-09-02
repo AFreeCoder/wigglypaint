@@ -35,6 +35,8 @@ export interface Game {
   url?: string
   type?: 'local' | 'iframe'
   scale?: number
+  width?: number
+  height?: number
   gameInfo?: GameInfo
 }
 
@@ -53,6 +55,8 @@ export const GAMES: Game[] = [
     type: 'iframe',
     url: 'https://r2.wigglypaint.co/WigglyPaint.html',
     scale: 1.65,
+    width: 512,
+    height: 342,
     gameInfo: {
       introduction: {
         title: 'WigglyPaint: The Living Drawing Tool',
@@ -167,6 +171,8 @@ export const GAMES: Game[] = [
     playCount: '45.6K',
     type: 'iframe',
     url: 'https://r2.wigglypaint.co/ovo-unblocked.html',
+    width: 1280,
+    height: 720,
     gameInfo: {
       introduction: {
         title: 'OVO Unblocked: The Ultimate Precision Parkour Challenge',
@@ -284,6 +290,8 @@ export const GAMES: Game[] = [
     playCount: '2.1M',
     type: 'iframe',
     url: 'https://www.pixilart.com/draw',
+    width: 1280,
+    height: 720,
     gameInfo: {
       introduction: {
         title: 'Pixilart: The Ultimate Pixel Art Online Creation Platform',

@@ -31,14 +31,14 @@ export default function TryThese({ enabled = true, excludeGameId }: TryTheseProp
   // 加载中的占位符
   if (!isLoaded) {
     return (
-      <div className="bg-white rounded-xl shadow-lg p-4">
+      <div className="bg-card border border-border rounded-xl shadow-sm p-4">
         <div className="flex items-center justify-between mb-4">
-          <h3 className="text-lg font-bold text-gray-800 flex items-center">
+          <h3 className="text-lg font-bold text-text flex items-center">
             ⚡ Try These
           </h3>
           <button 
             onClick={() => router.push('/games')}
-            className="text-blue-600 hover:text-blue-700 text-xs font-semibold transition-colors"
+            className="text-text hover:text-brand text-xs font-semibold transition-colors"
           >
             More →
           </button>
@@ -48,10 +48,10 @@ export default function TryThese({ enabled = true, excludeGameId }: TryTheseProp
         <div className="space-y-3 hidden lg:block">
           {[...Array(4)].map((_, index) => (
             <div key={index} className="flex items-center space-x-3 p-2 rounded-lg animate-pulse">
-              <div className="w-8 h-8 bg-gray-200 rounded"></div>
+              <div className="w-8 h-8 bg-muted rounded"></div>
               <div className="flex-1">
-                <div className="h-3 bg-gray-200 rounded mb-1"></div>
-                <div className="h-2 w-12 bg-gray-200 rounded"></div>
+                <div className="h-3 bg-muted rounded mb-1"></div>
+                <div className="h-2 w-12 bg-muted rounded"></div>
               </div>
             </div>
           ))}
@@ -61,11 +61,11 @@ export default function TryThese({ enabled = true, excludeGameId }: TryTheseProp
         <div className="lg:hidden">
           <div className="flex space-x-3 overflow-x-auto pb-2">
             {[...Array(4)].map((_, index) => (
-              <div key={index} className="flex-shrink-0 w-32 bg-gray-50 rounded-lg p-3 animate-pulse">
+              <div key={index} className="flex-shrink-0 w-32 bg-gray-light rounded-lg p-3 animate-pulse">
                 <div className="text-center">
-                  <div className="w-8 h-8 bg-gray-200 rounded mx-auto mb-2"></div>
-                  <div className="h-3 bg-gray-200 rounded mb-2"></div>
-                  <div className="h-2 w-16 bg-gray-200 rounded mx-auto"></div>
+                  <div className="w-8 h-8 bg-muted rounded mx-auto mb-2"></div>
+                  <div className="h-3 bg-muted rounded mb-2"></div>
+                  <div className="h-2 w-16 bg-muted rounded mx-auto"></div>
                 </div>
               </div>
             ))}
@@ -76,14 +76,14 @@ export default function TryThese({ enabled = true, excludeGameId }: TryTheseProp
   }
 
   return (
-    <div className="bg-white rounded-xl shadow-lg p-4">
+    <div className="bg-card border border-border rounded-xl shadow-sm p-4">
       <div className="flex items-center justify-between mb-4">
-        <h3 className="text-lg font-bold text-gray-800 flex items-center">
+        <h3 className="text-lg font-bold text-text flex items-center">
           ⚡ Try These
         </h3>
         <button 
           onClick={() => router.push('/games')}
-          className="text-blue-600 hover:text-blue-700 text-xs font-semibold transition-colors"
+          className="text-text hover:text-brand text-xs font-semibold transition-colors"
         >
           More →
         </button>
@@ -96,8 +96,8 @@ export default function TryThese({ enabled = true, excludeGameId }: TryTheseProp
             key={game.id}
             className={`group flex items-center space-x-3 p-3 rounded-lg cursor-pointer transition-all duration-200 border ${
               hoveredGame === game.id 
-                ? 'bg-blue-50 border-blue-200 shadow-sm' 
-                : 'bg-gray-50/80 border-gray-200 hover:bg-gray-100 hover:border-gray-300'
+                ? 'bg-gray-light border-brand shadow-sm' 
+                : 'bg-card border-border hover:bg-gray-50 hover:border-brand'
             }`}
             onMouseEnter={() => setHoveredGame(game.id)}
             onMouseLeave={() => setHoveredGame(null)}
@@ -108,7 +108,7 @@ export default function TryThese({ enabled = true, excludeGameId }: TryTheseProp
             </div>
             <div className="flex-1 min-w-0">
               <h4 className={`font-semibold text-sm leading-tight truncate transition-colors ${
-                hoveredGame === game.id ? 'text-blue-600' : 'text-gray-800'
+                hoveredGame === game.id ? 'text-brand' : 'text-text'
               }`}>
                 {game.title}
               </h4>
@@ -126,14 +126,14 @@ export default function TryThese({ enabled = true, excludeGameId }: TryTheseProp
           {games.map((game) => (
             <div
               key={game.id}
-              className="group flex-shrink-0 w-32 bg-gradient-to-br from-gray-50/90 to-gray-100/50 rounded-lg p-3 border-2 border-gray-200/80 hover:border-blue-200 hover:shadow-sm cursor-pointer transition-all duration-200"
+              className="group flex-shrink-0 w-32 bg-card rounded-lg p-3 border-2 border-border hover:border-brand hover:shadow-sm cursor-pointer transition-all duration-200"
               onClick={() => handlePlayGame(game.slug || game.title.toLowerCase().replace(/\s+/g, '-'))}
             >
               <div className="text-center">
                 <div className="text-3xl mb-2 transform group-hover:scale-110 transition-transform duration-200">
                   {game.image}
                 </div>
-                <h4 className="font-semibold text-xs text-gray-800 leading-tight mb-2 group-hover:text-blue-600 transition-colors">
+                <h4 className="font-semibold text-xs text-text leading-tight mb-2 group-hover:text-brand transition-colors">
                   {game.title}
                 </h4>
                 <span className={`inline-block text-xs px-2 py-0.5 rounded-full font-medium ${getCategoryColor(game.category)}`}>
@@ -145,7 +145,7 @@ export default function TryThese({ enabled = true, excludeGameId }: TryTheseProp
         </div>
       </div>
       
-      <div className="mt-4 pt-3 border-t border-gray-100">
+      <div className="mt-4 pt-3 border-t border-border">
         <p className="text-xs text-gray-500 text-center">
           🎮 Quick games to try next
         </p>

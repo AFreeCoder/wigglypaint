@@ -2,6 +2,11 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import { MODULE_CONFIG } from '@/config/modules'
+import ThemeToggleBar from '@/components/ThemeToggleBar'
+import { SiteJsonLd } from '@/components/seo/JsonLd'
+import NavBar from '@/components/NavBar'
+import Footer from '@/components/Footer'
+import CookieConsent from '@/components/CookieConsent'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -67,8 +72,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="en" data-theme="A">
+      <body className={`${inter.className} bg-bg text-text`}>
+        <NavBar />
         {/* Google Analytics */}
         {MODULE_CONFIG.GA_ID && (
           <>
@@ -77,7 +83,7 @@ export default function RootLayout({
               dangerouslySetInnerHTML={{
                 __html: `
                   window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
+                  function gtag(){dataLayer.push(arguments);} 
                   gtag('js', new Date());
                   gtag('config', '${MODULE_CONFIG.GA_ID}');
                 `,
@@ -86,6 +92,12 @@ export default function RootLayout({
           </>
         )}
         {children}
+        <Footer />
+        <ThemeToggleBar />
+        {/* SEO: JSON-LD for WebSite and Organization */}
+        <SiteJsonLd />
+        {/* Cookie 同意横幅（按配置显示） */}
+        {MODULE_CONFIG.COOKIE_CONSENT && <CookieConsent />}
       </body>
     </html>
   )

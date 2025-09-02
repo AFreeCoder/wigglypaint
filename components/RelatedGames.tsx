@@ -32,12 +32,12 @@ export default function RelatedGames({ enabled = true, excludeGameId }: RelatedG
   // 在加载完成前显示占位符
   if (!isLoaded) {
     return (
-      <div className="bg-white rounded-xl shadow-lg p-6">
+      <div className="bg-card border border-border rounded-xl shadow-sm p-6">
         <div className="flex items-center justify-between mb-6">
-          <h3 className="text-2xl font-bold text-gray-800">🔥 Most Popular Games</h3>
+          <h3 className="text-2xl font-bold text-text">🔥 Most Popular Games</h3>
           <button 
             onClick={() => router.push('/games')}
-            className="text-blue-600 hover:text-blue-700 text-sm font-semibold transition-colors"
+            className="text-text hover:text-brand text-sm font-semibold transition-colors"
           >
             View All →
           </button>
@@ -45,26 +45,26 @@ export default function RelatedGames({ enabled = true, excludeGameId }: RelatedG
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {[...Array(6)].map((_, index) => (
-            <div key={index} className="bg-gradient-to-br from-gray-50 to-white rounded-xl p-4 border border-gray-100 animate-pulse">
+            <div key={index} className="bg-gray-light rounded-xl p-4 border border-border animate-pulse">
               <div className="flex items-start justify-between mb-3">
-                <div className="w-12 h-12 bg-gray-200 rounded"></div>
+                <div className="w-12 h-12 bg-muted rounded"></div>
                 <div className="flex items-center space-x-1">
                   {[...Array(5)].map((_, i) => (
-                    <div key={i} className="w-3 h-3 bg-gray-200 rounded"></div>
+                    <div key={i} className="w-3 h-3 bg-muted rounded"></div>
                   ))}
                 </div>
               </div>
-              <div className="h-4 bg-gray-200 rounded mb-2"></div>
-              <div className="h-3 bg-gray-200 rounded mb-3"></div>
+              <div className="h-4 bg-muted rounded mb-2"></div>
+              <div className="h-3 bg-muted rounded mb-3"></div>
               <div className="flex justify-between mb-3">
-                <div className="h-6 w-16 bg-gray-200 rounded-full"></div>
-                <div className="h-4 w-12 bg-gray-200 rounded"></div>
+                <div className="h-6 w-16 bg-muted rounded-full"></div>
+                <div className="h-4 w-12 bg-muted rounded"></div>
               </div>
               <div className="flex justify-between mb-3">
-                <div className="h-3 w-16 bg-gray-200 rounded"></div>
-                <div className="h-3 w-16 bg-gray-200 rounded"></div>
+                <div className="h-3 w-16 bg-muted rounded"></div>
+                <div className="h-3 w-16 bg-muted rounded"></div>
               </div>
-              <div className="h-8 bg-gray-200 rounded-lg"></div>
+              <div className="h-8 bg-muted rounded-lg"></div>
             </div>
           ))}
         </div>
@@ -85,12 +85,12 @@ export default function RelatedGames({ enabled = true, excludeGameId }: RelatedG
   }
 
   return (
-    <div className="bg-white rounded-xl shadow-lg p-6">
+    <div className="bg-card border border-border rounded-xl shadow-sm p-6">
       <div className="flex items-center justify-between mb-6">
-        <h3 className="text-2xl font-bold text-gray-800">🔥 Most Popular Games</h3>
+        <h3 className="text-2xl font-bold text-text">🔥 Most Popular Games</h3>
         <button 
           onClick={() => router.push('/games')}
-          className="text-blue-600 hover:text-blue-700 text-sm font-semibold transition-colors"
+          className="text-text hover:text-brand text-sm font-semibold transition-colors"
         >
           View All →
         </button>
@@ -100,7 +100,7 @@ export default function RelatedGames({ enabled = true, excludeGameId }: RelatedG
         {popularGames.map((game) => (
           <div
             key={game.id}
-            className="group bg-gradient-to-br from-gray-50 to-white rounded-xl p-4 border border-gray-100 hover:border-blue-200 hover:shadow-lg transition-all duration-300 cursor-pointer transform hover:scale-[1.02]"
+            className="group bg-card rounded-xl p-4 border border-border hover:border-brand hover:shadow-hover transition-all duration-300 cursor-pointer transform hover:scale-[1.02]"
             onMouseEnter={() => setHoveredGame(game.id)}
             onMouseLeave={() => setHoveredGame(null)}
           >
@@ -113,7 +113,7 @@ export default function RelatedGames({ enabled = true, excludeGameId }: RelatedG
               </div>
             </div>
             
-            <h4 className="font-bold text-gray-800 mb-1 group-hover:text-blue-600 transition-colors">
+            <h4 className="font-bold text-text mb-1 group-hover:text-brand transition-colors">
               {game.title}
             </h4>
             
@@ -138,8 +138,8 @@ export default function RelatedGames({ enabled = true, excludeGameId }: RelatedG
             <button 
               className={`w-full py-2 px-4 rounded-lg font-semibold text-sm transition-all duration-200 ${
                 hoveredGame === game.id
-                  ? 'bg-blue-500 text-white shadow-md transform scale-105'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  ? 'bg-brand text-brand-foreground shadow-button transform scale-105'
+                  : 'bg-card border border-border text-text hover:bg-gray-50'
               }`}
               onClick={() => handlePlayGame(game.slug || game.title.toLowerCase().replace(/\s+/g, '-'))}
             >

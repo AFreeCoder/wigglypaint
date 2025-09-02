@@ -1,15 +1,12 @@
 import Link from 'next/link'
-import Header from '@/components/Header'
 
 export default function TermsOfService() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50">
-      {/* 头部 */}
-      <Header />
+    <div className="min-h-screen bg-bg">
 
       {/* 主要内容 */}
       <main className="max-w-4xl mx-auto px-4 py-8 sm:px-6">
-        <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+        <div className="bg-card border border-border rounded-xl shadow-sm overflow-hidden">
           {/* 页面标题 */}
           <div className="bg-gradient-to-r from-green-500 to-blue-600 text-white p-8 text-center">
             <h1 className="text-3xl font-bold mb-2">Terms of Service</h1>

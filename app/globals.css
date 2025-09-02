@@ -4,10 +4,53 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
+/* Design Tokens (multi-theme) */
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  /* default theme A */
+  --color-brand: #6aaa64;
+  --color-brand-foreground: #ffffff;
+  --color-bg: #fafafa;
+  --color-card: #ffffff;
+  --color-text: #212937;
+  --color-muted: #e2e8f0;
+  --color-border: #dce2eb;
+  --color-success: #6aaa64;
+  --color-warning: #c9b458;
+  --color-danger: #dc2626;
+  --color-gray-light: #f1f5f9;
+  --color-gray-dark: #475569;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+[data-theme="A"] {
+  --color-brand: #6aaa64;
+  --color-bg: #fafafa;
+  --color-card: #ffffff;
+  --color-text: #212937;
+}
+[data-theme="B"] {
+  --color-brand: #3b82f6;
+  --color-bg: #f0f9ff;
+  --color-card: #ffffff;
+  --color-text: #1e3a8a;
+}
+[data-theme="C"] {
+  --color-brand: #8b5cf6;
+  --color-bg: #faf5ff;
+  --color-card: #ffffff;
+  --color-text: #581c87;
+}
+[data-theme="D"] {
+  --color-brand: #f59e0b;
+  --color-bg: #fffbeb;
+  --color-card: #ffffff;
+  --color-text: #92400e;
+}
+[data-theme="E"] {
+  --color-brand: #ec4899;
+  --color-bg: #fdf2f8;
+  --color-card: #ffffff;
+  --color-text: #be185d;
 }
 
 * {
@@ -21,8 +64,8 @@ html {
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-  color: rgb(var(--foreground-rgb));
+  font-family: var(--font-body);
+  color: var(--color-text);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
