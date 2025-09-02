@@ -3,9 +3,7 @@
 import { useState, useMemo } from 'react'
 import Link from 'next/link'
 import AdSpace from '@/components/AdSpace'
-import CookieConsent from '@/components/CookieConsent'
-import Footer from '@/components/Footer'
-import Header from '@/components/Header'
+// NavBar is provided globally in RootLayout
 import { MODULE_CONFIG } from '@/config/modules'
 import { GAMES_WITH_SLUGS, GAME_CATEGORIES, GAME_TAGS, GAME_DIFFICULTIES } from '@/config/games'
 import { GameTag, GameCategory, GameDifficulty } from '@/types/game'
@@ -34,25 +32,25 @@ export default function GamesPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50">
-      {/* 头部 */}
-      <Header />
+    <div className="min-h-screen">
 
       {/* 主要内容区域 */}
-      <main className="max-w-7xl mx-auto px-4 py-6 sm:px-6 sm:py-8">
+      <main className="max-w-6xl mx-auto px-0 sm:px-0 py-6 sm:py-8">
         <div className="flex flex-col lg:flex-row lg:gap-8">
-          {/* 左侧广告位 - 桌面端 */}
-          <div className="hidden lg:block lg:w-48 flex-shrink-0">
-            <div className="sticky top-24">
-              <AdSpace position="left" enabled={MODULE_CONFIG.LEFT_AD} />
+          {/* 左侧广告位 - 桌面端（仅启用时占位） */}
+          {MODULE_CONFIG.LEFT_AD && (
+            <div className="hidden lg:block lg:w-48 flex-shrink-0">
+              <div className="sticky top-24">
+                <AdSpace position="left" enabled={MODULE_CONFIG.LEFT_AD} />
+              </div>
             </div>
-          </div>
+          )}
 
           {/* 游戏主区域 */}
           <div className="flex-1 max-w-none">
             {/* 筛选区域 */}
-            <div className="bg-white rounded-xl shadow-lg p-6 mb-6">
-              <h2 className="text-xl font-bold text-gray-800 mb-4">🔍 Filter Games</h2>
+            <div className="pixel-card p-6 mb-6">
+              <h2 className="text-xl pixel-title text-text mb-4">🔍 Filter Games</h2>
               
               {/* 游戏类别筛选 */}
               <div className="mb-6">
@@ -62,11 +60,7 @@ export default function GamesPage() {
                     <button
                       key={category}
                       onClick={() => setSelectedCategory(category)}
-                      className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-                        selectedCategory === category
-                          ? 'bg-blue-500 text-white shadow-md'
-                          : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                      }`}
+                      className={`pixel-chip ${selectedCategory === category ? 'bg-brand text-brand-foreground' : ''}`}
                     >
                       {category}
                     </button>
@@ -80,11 +74,7 @@ export default function GamesPage() {
                 <div className="flex flex-wrap gap-2">
                   <button
                     onClick={() => setSelectedTags([])}
-                    className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-                      selectedTags.length === 0
-                        ? 'bg-green-500 text-white shadow-md'
-                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                    }`}
+                    className={`pixel-chip ${selectedTags.length === 0 ? 'bg-brand text-brand-foreground' : ''}`}
                   >
                     All
                   </button>
@@ -92,11 +82,7 @@ export default function GamesPage() {
                     <button
                       key={tag}
                       onClick={() => handleTagToggle(tag)}
-                      className={`px-3 py-1 rounded-full text-xs font-medium transition-all duration-200 ${
-                        selectedTags.includes(tag)
-                          ? 'bg-green-500 text-white shadow-md'
-                          : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                      }`}
+                      className={`pixel-chip ${selectedTags.includes(tag) ? 'bg-brand text-brand-foreground' : ''}`}
                     >
                       {tag}
                     </button>
@@ -112,11 +98,7 @@ export default function GamesPage() {
                     <button
                       key={difficulty}
                       onClick={() => setSelectedDifficulty(difficulty)}
-                      className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-                        selectedDifficulty === difficulty
-                          ? 'bg-purple-500 text-white shadow-md'
-                          : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                      }`}
+                      className={`pixel-chip ${selectedDifficulty === difficulty ? 'bg-brand text-brand-foreground' : ''}`}
                     >
                       {difficulty}
                     </button>
@@ -138,7 +120,7 @@ export default function GamesPage() {
               {filteredGames.map((game) => (
                 <div
                   key={game.id}
-                  className="group bg-white rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-[1.02]"
+                  className="group pixel-card pixel-card-hover p-4 cursor-pointer"
                 >
                   <div className="text-center mb-3">
                     <div className="text-4xl mb-2 transform group-hover:scale-110 transition-transform duration-200">
@@ -149,7 +131,7 @@ export default function GamesPage() {
                     </div>
                   </div>
                   
-                  <h4 className="font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors text-center">
+                  <h4 className="font-bold text-text mb-2 group-hover:text-brand transition-colors text-center">
                     {game.title}
                   </h4>
                   
@@ -172,7 +154,7 @@ export default function GamesPage() {
                   </div>
                   
                   <button 
-                    className="w-full py-2 px-4 rounded-lg font-semibold text-sm transition-all duration-200 bg-blue-500 text-white hover:bg-blue-600 shadow-md hover:shadow-lg transform hover:scale-105"
+                    className="w-full pixel-button"
                     onClick={() => handlePlayGame(game.slug!)}
                   >
                     {game.type === 'iframe' ? '🎮 Play Online' : '🚀 Play Now'}
@@ -183,9 +165,9 @@ export default function GamesPage() {
 
             {/* 空状态 */}
             {filteredGames.length === 0 && (
-              <div className="bg-white rounded-xl shadow-lg p-8 text-center">
+              <div className="pixel-card p-8 text-center">
                 <div className="text-6xl mb-4">🎮</div>
-                <h3 className="text-2xl font-bold text-gray-700 mb-2">No Games Found</h3>
+                <h3 className="text-2xl pixel-title text-text mb-2">No Games Found</h3>
                 <p className="text-gray-500 mb-4">
                   Try adjusting your filters to find more games.
                 </p>
@@ -195,7 +177,7 @@ export default function GamesPage() {
                     setSelectedTags([])
                     setSelectedDifficulty('All')
                   }}
-                  className="bg-blue-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-600 transition-colors"
+                  className="pixel-button"
                 >
                   Clear All Filters
                 </button>
@@ -208,20 +190,17 @@ export default function GamesPage() {
             </div>
           </div>
 
-          {/* 右侧广告位 - 桌面端 */}
-          <div className="hidden lg:block lg:w-48 flex-shrink-0">
-            <div className="sticky top-24">
-              <AdSpace position="right" enabled={MODULE_CONFIG.RIGHT_AD} />
+          {/* 右侧广告位 - 桌面端（仅启用时占位） */}
+          {MODULE_CONFIG.RIGHT_AD && (
+            <div className="hidden lg:block lg:w-48 flex-shrink-0">
+              <div className="sticky top-24">
+                <AdSpace position="right" enabled={MODULE_CONFIG.RIGHT_AD} />
+              </div>
             </div>
-          </div>
-        </div>
+          )}
+      </div>
       </main>
 
-      {/* 页脚 */}
-      <Footer />
-
-      {/* Cookie 同意横幅 */}
-      {MODULE_CONFIG.COOKIE_CONSENT && <CookieConsent />}
     </div>
   )
 }

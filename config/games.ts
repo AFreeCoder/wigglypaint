@@ -19,6 +19,7 @@ export type GameDifficulty = Exclude<typeof GAME_DIFFICULTIES[number], 'All'>
 
 // 导入其他类型定义
 import { GameInfo } from '@/types/game'
+import { slugify } from '@/utils/slug'
 
 export interface Game {
   id: number
@@ -35,6 +36,8 @@ export interface Game {
   url?: string
   type?: 'local' | 'iframe'
   scale?: number
+  width?: number
+  height?: number
   gameInfo?: GameInfo
 }
 
@@ -53,6 +56,8 @@ export const GAMES: Game[] = [
     type: 'iframe',
     url: 'https://r2.wigglypaint.co/WigglyPaint.html',
     scale: 1.65,
+    width: 512,
+    height: 342,
     gameInfo: {
       introduction: {
         title: 'WigglyPaint: The Living Drawing Tool',
@@ -91,15 +96,15 @@ export const GAMES: Game[] = [
         ]
       },
       howToPlay: {
-        title: 'Master the Art of Living Lines',
+        title: 'How to Play?',
         steps: [
-          { step: 1, icon: '🚀', title: 'Launch WigglyPaint', description: 'Open WigglyPaint instantly in your browser - no downloads or signups required' },
-          { step: 2, icon: '🎨', title: 'Choose Your Brush', description: 'Select from 8 animated brushes on the right panel, each with unique wiggly personality' },
-          { step: 3, icon: '✏️', title: 'Draw Living Lines', description: 'Click and drag to create animated strokes that wiggle, dance, and breathe with life' },
-          { step: 4, icon: '🎵', title: 'Hear Your Art', description: 'Each brush produces distinct sound effects as you draw, adding audio dimension to creativity' },
-          { step: 5, icon: '🛠️', title: 'Use Creative Tools', description: 'Adjust marker size, use eraser, undo mistakes, or clear canvas for fresh starts' },
-          { step: 6, icon: '🎬', title: 'Export as GIF', description: 'Save your WigglyPaint animated masterpiece as a GIF to share on social media or with friends' },
-          { step: 7, icon: '🌟', title: 'Share & Inspire', description: 'Post your WigglyPaint creations online and inspire others with your living artwork' }
+          { step: 1, title: 'Launch WigglyPaint', description: 'Open WigglyPaint instantly in your browser - no downloads or signups required' },
+          { step: 2, title: 'Choose Your Brush', description: 'Select from 8 animated brushes on the right panel, each with unique wiggly personality' },
+          { step: 3, title: 'Draw Living Lines', description: 'Click and drag to create animated strokes that wiggle, dance, and breathe with life' },
+          { step: 4, title: 'Hear Your Art', description: 'Each brush produces distinct sound effects as you draw, adding audio dimension to creativity' },
+          { step: 5, title: 'Use Creative Tools', description: 'Adjust marker size, use eraser, undo mistakes, or clear canvas for fresh starts' },
+          { step: 6, title: 'Export as GIF', description: 'Save your WigglyPaint animated masterpiece as a GIF to share on social media or with friends' },
+          { step: 7, title: 'Share & Inspire', description: 'Post your WigglyPaint creations online and inspire others with your living artwork' }
         ],
         tips: [
           'Experiment with WigglyPaint brush combinations - layer different animated effects for complex artwork',
@@ -137,7 +142,7 @@ export const GAMES: Game[] = [
         },
         {
           question: 'Do I need to download or install anything?',
-          answer: 'No downloads required! WigglyPaint runs instantly in your web browser. You can even bookmark WigglyPaint or save the page offline for use without internet connection.'
+          answer: 'No downloads required! WigglyPaint runs instantly in your web browser.'
         },
         {
           question: 'What type of art can I create with WigglyPaint?',
@@ -167,6 +172,8 @@ export const GAMES: Game[] = [
     playCount: '45.6K',
     type: 'iframe',
     url: 'https://r2.wigglypaint.co/ovo-unblocked.html',
+    width: 1280,
+    height: 720,
     gameInfo: {
       introduction: {
         title: 'OVO Unblocked: The Ultimate Precision Parkour Challenge',
@@ -205,16 +212,16 @@ export const GAMES: Game[] = [
         ]
       },
       howToPlay: {
-        title: 'Master OVO Unblocked: From Beginner to Parkour Pro',
+        title: 'How to Play?',
         steps: [
-          { step: 1, icon: '🎮', title: 'Get Started with OVO Unblocked', description: 'Launch OVO Unblocked in your browser - no downloads or registration required. OVO Unblocked loads quickly on any device!' },
-          { step: 2, icon: '←→', title: 'Basic Movement', description: 'Use left and right arrow keys to move your stickman character smoothly across platforms' },
-          { step: 3, icon: '↑', title: 'Jump & Wall Jump', description: 'Press Up arrow to jump over obstacles. While sliding down a wall, quickly tap Up to perform wall jumps for advanced navigation' },
-          { step: 4, icon: '⬇', title: 'Slide & Smash Techniques', description: 'Press Down while running to slide under low obstacles, or while airborne to smash through transparent platforms and barriers' },
-          { step: 5, icon: '🎯', title: 'Master Advanced Timing', description: 'Perfect your timing for spikes, moving platforms, teleports, and gravity-defying sections that test your reflexes' },
-          { step: 6, icon: '🪙', title: 'Collect & Customize', description: 'Grab bonus coins scattered throughout levels to unlock unique character skins like alien, watermelon, and more creative designs' },
-          { step: 7, icon: '🏆', title: 'Progress in OVO Unblocked', description: 'Challenge yourself through 40+ OVO Unblocked levels that gradually build your parkour skills and problem-solving abilities' },
-          { step: 8, icon: '⚡', title: 'OVO Unblocked Speedrun Mastery', description: 'Once comfortable with OVO Unblocked, attempt speedruns to perfect your movement flow and compete for faster completion times' }
+          { step: 1, title: 'Get Started with OVO Unblocked', description: 'Launch OVO Unblocked in your browser - no downloads or registration required. OVO Unblocked loads quickly on any device!' },
+          { step: 2, title: 'Basic Movement', description: 'Use left and right arrow keys to move your stickman character smoothly across platforms' },
+          { step: 3, title: 'Jump & Wall Jump', description: 'Press Up arrow to jump over obstacles. While sliding down a wall, quickly tap Up to perform wall jumps for advanced navigation' },
+          { step: 4, title: 'Slide & Smash Techniques', description: 'Press Down while running to slide under low obstacles, or while airborne to smash through transparent platforms and barriers' },
+          { step: 5, title: 'Master Advanced Timing', description: 'Perfect your timing for spikes, moving platforms, teleports, and gravity-defying sections that test your reflexes' },
+          { step: 6, title: 'Collect & Customize', description: 'Grab bonus coins scattered throughout levels to unlock unique character skins like alien, watermelon, and more creative designs' },
+          { step: 7, title: 'Progress in OVO Unblocked', description: 'Challenge yourself through 40+ OVO Unblocked levels that gradually build your parkour skills and problem-solving abilities' },
+          { step: 8, title: 'OVO Unblocked Speedrun Mastery', description: 'Once comfortable with OVO Unblocked, attempt speedruns to perfect your movement flow and compete for faster completion times' }
         ],
         tips: [
           'Combine wall jumping with sliding for fluid advanced movement chains that maintain momentum',
@@ -273,7 +280,7 @@ export const GAMES: Game[] = [
   },
   {
     id: 3,
-    title: 'Make Pixel Art Online - Pixilart.com',
+    title: 'Make Pixel Art Online',
     description: 'Create Pixel Art Online with this powerful digital art tool. Make Pixel Art Online sprites, GIF animations, and join 2M+ artists to collaborate, share, and explore Pixel Art Online creativity.',
     image: '🎮',
     category: 'Casual',
@@ -284,6 +291,8 @@ export const GAMES: Game[] = [
     playCount: '2.1M',
     type: 'iframe',
     url: 'https://www.pixilart.com/draw',
+    width: 1280,
+    height: 720,
     gameInfo: {
       introduction: {
         title: 'Pixilart: The Ultimate Pixel Art Online Creation Platform',
@@ -322,16 +331,16 @@ export const GAMES: Game[] = [
         ]
       },
       howToPlay: {
-        title: 'Master Pixel Art Online Creation with Pixilart',
+        title: 'How to Play?',
         steps: [
-          { step: 1, icon: '🚀', title: 'Start Creating', description: 'Visit pixilart.com/draw to launch the Pixel Art Online drawing tool instantly in your browser' },
-          { step: 2, icon: '🎨', title: 'Choose Your Canvas', description: 'Select canvas size and resolution perfect for your Pixel Art Online project - sprites, or animations' },
-          { step: 3, icon: '🖌️', title: 'Select Drawing Tools', description: 'Pick from brushes, pencils, fill tools, and specialized Pixel Art Online tools with customizable settings' },
-          { step: 4, icon: '🎨', title: 'Create Your Art', description: 'Make Pixel Art Online pixel by pixel or use advanced tools to create Pixel Art Online masterpieces with layers and effects' },
-          { step: 5, icon: '📚', title: 'Use Layers', description: 'Organize your artwork with multiple layers for complex compositions and easy editing' },
-          { step: 6, icon: '🎬', title: 'Animate Your Art', description: 'Create frame-by-frame animations and export them as GIFs for dynamic visual content' },
-          { step: 7, icon: '💾', title: 'Save & Share', description: 'Save your creations to your profile and share them with the Pixilart community for feedback' },
-          { step: 8, icon: '🌟', title: 'Join the Community', description: 'Follow other artists, participate in challenges, and build your reputation in the art community' }
+          { step: 1, title: 'Start Creating', description: 'Visit pixilart.com/draw to launch the Pixel Art Online drawing tool instantly in your browser' },
+          { step: 2, title: 'Choose Your Canvas', description: 'Select canvas size and resolution perfect for your Pixel Art Online project - sprites, or animations' },
+          { step: 3, title: 'Select Drawing Tools', description: 'Pick from brushes, pencils, fill tools, and specialized Pixel Art Online tools with customizable settings' },
+          { step: 4, title: 'Create Your Art', description: 'Make Pixel Art Online pixel by pixel or use advanced tools to create Pixel Art Online masterpieces with layers and effects' },
+          { step: 5, title: 'Use Layers', description: 'Organize your artwork with multiple layers for complex compositions and easy editing' },
+          { step: 6, title: 'Animate Your Art', description: 'Create frame-by-frame animations and export them as GIFs for dynamic visual content' },
+          { step: 7, title: 'Save & Share', description: 'Save your creations to your profile and share them with the Pixilart community for feedback' },
+          { step: 8, title: 'Join the Community', description: 'Follow other artists, participate in challenges, and build your reputation in the art community' }
         ],
         tips: [
           'Start with smaller canvas sizes to learn Pixel Art Online fundamentals before tackling complex Pixel Art Online projects',
@@ -393,7 +402,7 @@ export const GAMES: Game[] = [
 // 自动生成slug
 export const GAMES_WITH_SLUGS = GAMES.map(game => ({
   ...game,
-  slug: game.title.toLowerCase().replace(/\s+/g, '-')
+  slug: slugify(game.title)
 }))
 
 

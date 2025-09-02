@@ -3,6 +3,8 @@
 import { HOMEPAGE_GAME, GAMES_WITH_SLUGS } from '@/config/games'
 import HomeGame from './HomeGame'
 import FullscreenButton from './FullscreenButton'
+import ResponsiveIframe from './ResponsiveIframe'
+import PixelWindow from './PixelWindow'
 
 interface GameProps {
   gameId?: number
@@ -14,7 +16,7 @@ export default function Game({ gameId }: GameProps) {
   
   if (!gameConfig) {
     return (
-      <div className="bg-white rounded-xl shadow-lg p-8 max-w-md mx-auto">
+      <div className="bg-card border border-border rounded-xl shadow-sm p-8 max-w-md mx-auto">
         <div className="text-center text-red-600">
           Game not found
         </div>
@@ -29,7 +31,7 @@ export default function Game({ gameId }: GameProps) {
         return <HomeGame />
       default:
         return (
-          <div className="bg-white rounded-xl shadow-lg p-8 max-w-md mx-auto">
+          <div className="bg-card border border-border rounded-xl shadow-sm p-8 max-w-md mx-auto">
             <div className="text-center text-gray-600">
               Local game component not implemented
             </div>
@@ -41,21 +43,14 @@ export default function Game({ gameId }: GameProps) {
   // iframe游戏类型
   if (gameConfig.type === 'iframe' && gameConfig.url) {
     return (
-      <div className="bg-white rounded-xl shadow-lg overflow-hidden max-w-5xl mx-auto">
-        <div className="relative overflow-hidden">
-          <iframe
-            src={gameConfig.url}
-            className="w-full h-[600px] border-0"
-            title={gameConfig.title}
-            allowFullScreen
-            loading="lazy"
-            id="homepage-game-iframe"
-            style={{ 
-              transform: `scale(${gameConfig.scale || 1})`, 
-              transformOrigin: 'center' 
-            }}
-          />
-        </div>
+      <PixelWindow title={gameConfig.title}>
+        <ResponsiveIframe
+          id="homepage-game-iframe"
+          src={gameConfig.url}
+          title={gameConfig.title}
+          width={(gameConfig as any).width}
+          height={(gameConfig as any).height}
+        />
         
         <div className="bg-gray-900 text-white px-3 sm:px-4 py-3 flex items-center justify-between">
           <div className="flex items-center space-x-2 sm:space-x-3">
@@ -69,12 +64,12 @@ export default function Game({ gameId }: GameProps) {
           </div>
           <FullscreenButton iframeId="homepage-game-iframe" />
         </div>
-      </div>
+      </PixelWindow>
     )
   }
 
   return (
-    <div className="bg-white rounded-xl shadow-lg p-8 max-w-md mx-auto">
+    <div className="bg-card border border-border rounded-xl shadow-sm p-8 max-w-md mx-auto">
       <div className="text-center text-gray-600">
         Game type not supported
       </div>

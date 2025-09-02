@@ -3,11 +3,74 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
 
+/* Design Tokens (multi-theme) */
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  /* default theme A */
+  --color-brand: #6aaa64;
+  --color-brand-foreground: #ffffff;
+  --color-bg: #fafafa;
+  --color-card: #ffffff;
+  --color-text: #212937;
+  --color-muted: #e2e8f0;
+  --color-border: #dce2eb;
+  --color-success: #6aaa64;
+  --color-warning: #c9b458;
+  --color-danger: #dc2626;
+  --color-gray-light: #f1f5f9;
+  --color-gray-dark: #475569;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+[data-theme="A"] {
+  --color-brand: #6aaa64;
+  --color-bg: #fafafa;
+  --color-card: #ffffff;
+  --color-text: #212937;
+}
+[data-theme="B"] {
+  --color-brand: #3b82f6;
+  --color-bg: #f0f9ff;
+  --color-card: #ffffff;
+  --color-text: #1e3a8a;
+}
+[data-theme="C"] {
+  --color-brand: #8b5cf6;
+  --color-bg: #faf5ff;
+  --color-card: #ffffff;
+  --color-text: #581c87;
+}
+[data-theme="D"] {
+  --color-brand: #f59e0b;
+  --color-bg: #fffbeb;
+  --color-card: #ffffff;
+  --color-text: #92400e;
+}
+[data-theme="E"] {
+  --color-brand: #ec4899;
+  --color-bg: #fdf2f8;
+  --color-card: #ffffff;
+  --color-text: #be185d;
+}
+
+/* Pixel theme tokens */
+[data-theme="Pixel"] {
+  --color-brand: #00a884; /* retro teal */
+  --color-brand-foreground: #ffffff;
+  --color-bg: #f5f5f5;    /* light gray */
+  --color-card: #ffffff;  /* white cards */
+  --color-text: #111827;  /* near black */
+  --color-border: #1f2937;/* dark border for hard edges */
+}
+/* Pixel theme background texture */
+[data-theme="Pixel"] body {
+  background-color: var(--color-bg);
+  background-image:
+    linear-gradient(to right, rgba(17,24,39,0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(17,24,39,0.04) 1px, transparent 1px);
+  background-size: 8px 8px;
+  image-rendering: pixelated;
 }
 
 * {
@@ -21,8 +84,8 @@ html {
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-  color: rgb(var(--foreground-rgb));
+  font-family: var(--font-body);
+  color: var(--color-text);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -53,6 +116,16 @@ body {
   .backdrop-blur-sm {
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
+  }
+
+  /* Pixel grid utilities */
+  .pixel-grid-lg {
+    background-color: var(--color-bg);
+    background-image:
+      linear-gradient(to right, rgba(17,24,39,0.06) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(17,24,39,0.06) 1px, transparent 1px);
+    background-size: 16px 16px;
+    image-rendering: pixelated;
   }
 }
 
@@ -102,6 +175,51 @@ body {
   .card-hover {
     @apply transform hover:scale-[1.02] transition-transform duration-300;
   }
+
+  /* Pixel components */
+  .pixel-title {
+    font-family: 'Press Start 2P', monospace;
+    letter-spacing: 0;
+  }
+  .pixel-font {
+    font-family: 'VT323', monospace;
+    letter-spacing: 0.5px;
+    font-size: 18px;
+  }
+  .pixel-card {
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: 0;
+    box-shadow: 2px 2px 0 0 var(--color-border);
+  }
+  .pixel-card-hover:hover {
+    box-shadow: 3px 3px 0 0 var(--color-border);
+    transform: translate(-1px, -1px);
+  }
+  .pixel-button {
+    background: var(--color-card);
+    color: var(--color-text);
+    border: 2px solid var(--color-border);
+    border-radius: 0;
+    padding: 10px 14px;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 12px;
+    line-height: 1;
+  }
+  .pixel-button:hover { background: var(--color-brand); color: var(--color-brand-foreground, #fff); }
+  .pixel-chip {
+    background: var(--color-card);
+    border: 2px solid var(--color-border);
+    border-radius: 0;
+    padding: 6px 10px;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 10px;
+    line-height: 1;
+  }
+  .pixel-titlebar {
+    background: #f3f4f6; /* light gray */
+  }
+  .pixel-dot { display:inline-block; width:10px; height:10px; border:2px solid var(--color-border); }
 }
 
 /* Focus styles for accessibility */

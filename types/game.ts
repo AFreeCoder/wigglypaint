@@ -12,7 +12,6 @@ export interface GameInfo {
     title: string
     steps: Array<{
       step: number
-      icon: string
       title: string
       description: string
     }>
