@@ -209,3 +209,8 @@ export const HOMEPAGE_GAME = {
 ## 结论
 
 这个改造方案既保持了现有技术架构的优势，又充分突出了WigglyPaint的特色，为用户提供专业的创意绘画平台体验。通过分阶段实施，可以确保改造过程平稳进行，同时持续优化用户体验和商业价值。
+
+## 实施补充（文案来源与约束）
+
+- 首页文案来源：Intro / How to Play / Pro Tips / FAQ 均由 `config/games.ts` 中首页游戏（`HOMEPAGE_GAME`）的 `gameInfo` 驱动；如内容缺失，对应分区不渲染。
+- How to Play 步骤字段不再支持 `icon`，仅保留 `step`、`title`、`description` 三项，便于统一样式与 SEO。

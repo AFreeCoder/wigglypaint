@@ -28,7 +28,7 @@ export default function FAQSection({ game }: Props) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-8">
-          <h2 className="text-4xl font-bold text-text mb-2">❓ Frequently Asked Questions</h2>
+          <h2 className="text-4xl font-bold text-text mb-2">Frequently Asked Questions</h2>
           <div className="w-24 h-1 bg-brand mx-auto rounded-full" />
         </div>
 
@@ -52,10 +52,10 @@ export default function FAQSection({ game }: Props) {
         </div>
 
         <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 text-center mt-8">
-          <h4 className="font-semibold text-blue-800 mb-2">🎮 Ready to Play?</h4>
+          <h4 className="font-semibold text-blue-800 mb-2">Ready to Play?</h4>
           <p className="text-blue-700 mb-4">Scroll up to the top and start creating now!</p>
           <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="bg-brand text-brand-foreground px-6 py-2 rounded-lg font-semibold hover:opacity-90 transition-opacity">
-            🚀 Start Playing
+            Start Playing
           </button>
         </div>
       </div>

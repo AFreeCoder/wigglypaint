@@ -481,3 +481,14 @@ export async function getGames(): Promise<Game[]> {
 3. **Cookie 使用**: 如果使用第三方广告服务，请确保在隐私政策中明确说明
 4. **数据保护**: 确保您的数据处理符合当地法律法规要求
 5. **法律审查**: 建议在正式使用前请法律专业人士审查这些法律文件
+
+
+### 首页文案配置（重要）
+
+- 首页 Intro / How to Play / Pro Tips / FAQ 的内容由 `config/games.ts` 中首页游戏（`HOMEPAGE_GAME` 指向的条目）的 `gameInfo` 控制。
+- How to Play 的步骤字段不再支持 `icon` 属性，仅保留：
+  - `step: number`
+  - `title: string`
+  - `description: string`
+- 若对应内容缺失，该分区会自动不渲染（避免默认占位）。
+
