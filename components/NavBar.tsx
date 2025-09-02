@@ -39,41 +39,29 @@ export default function NavBar() {
   };
 
   return (
-    <nav className="bg-card border-b border-border sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <div className="flex items-center">
-            <Link href="/" className="text-2xl font-bold text-text hover:text-brand transition-colors">
-              WigglyPaint
-            </Link>
-          </div>
-          <div className="hidden md:flex items-center space-x-8">
+    <nav className="sticky top-0 z-50">
+      <div className="max-w-6xl mx-auto">
+        <div className="pixel-card px-4 sm:px-6 h-16 flex items-center justify-between">
+          <Link href="/" className="pixel-title text-base text-text hover:text-brand">
+            WigglyPaint
+          </Link>
+          <div className="hidden md:flex items-center gap-6">
             {renderNavLink("popular-games", "Popular Games")}
             {renderNavLink("variant-grid", "Variants")}
             {renderNavLink("how-to-play", "How to Play")}
             {renderNavLink("faq", "FAQ")}
-            <Link href="/games" className="text-text hover:text-brand transition-colors font-medium">
-              All Games
-            </Link>
-            <Link href="/" className="text-text hover:text-brand transition-colors font-medium">
-              Home
-            </Link>
+            <Link href="/games" className="text-text hover:text-brand font-medium">All Games</Link>
+            <Link href="/" className="text-text hover:text-brand font-medium">Home</Link>
             <button
               onClick={() => {
-                if (availableSections.includes("hero")) {
-                  scrollToSection("hero");
-                } else {
-                  window.location.href = "/";
-                }
+                if (availableSections.includes("hero")) scrollToSection("hero");
+                else window.location.href = "/";
               }}
-              className="bg-brand text-brand-foreground px-4 py-2 rounded-lg font-medium hover:opacity-90 transition-opacity"
-            >
-              Play Now
-            </button>
+              className="pixel-button"
+            >Play Now</button>
           </div>
         </div>
       </div>
     </nav>
   );
 }
-

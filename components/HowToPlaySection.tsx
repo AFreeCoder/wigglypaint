@@ -32,7 +32,7 @@ export default function HowToPlaySection({ game }: Props) {
   }
 
   return (
-    <section id="how-to-play" className="py-16 px-4 bg-bg" itemScope itemType="https://schema.org/HowTo">
+    <section id="how-to-play" className="py-16 px-4" itemScope itemType="https://schema.org/HowTo">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-8">
@@ -69,4 +69,3 @@ export default function HowToPlaySection({ game }: Props) {
     </section>
   )
 }
-

@@ -4,6 +4,7 @@ import { HOMEPAGE_GAME, GAMES_WITH_SLUGS } from '@/config/games'
 import HomeGame from './HomeGame'
 import FullscreenButton from './FullscreenButton'
 import ResponsiveIframe from './ResponsiveIframe'
+import PixelWindow from './PixelWindow'
 
 interface GameProps {
   gameId?: number
@@ -42,12 +43,11 @@ export default function Game({ gameId }: GameProps) {
   // iframe游戏类型
   if (gameConfig.type === 'iframe' && gameConfig.url) {
     return (
-      <div className="bg-card border border-border rounded-xl shadow-sm overflow-hidden w-full">
+      <PixelWindow title={gameConfig.title}>
         <ResponsiveIframe
           id="homepage-game-iframe"
           src={gameConfig.url}
           title={gameConfig.title}
-          // 可在游戏数据中加入原始分辨率；缺省采用16:9
           width={(gameConfig as any).width}
           height={(gameConfig as any).height}
         />
@@ -64,7 +64,7 @@ export default function Game({ gameId }: GameProps) {
           </div>
           <FullscreenButton iframeId="homepage-game-iframe" />
         </div>
-      </div>
+      </PixelWindow>
     )
   }
 

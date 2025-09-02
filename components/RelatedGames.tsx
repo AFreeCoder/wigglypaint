@@ -85,9 +85,9 @@ export default function RelatedGames({ enabled = true, excludeGameId }: RelatedG
   }
 
   return (
-    <div className="bg-card border border-border rounded-xl shadow-sm p-6">
+    <div className="pixel-card pixel-card-hover p-6">
       <div className="flex items-center justify-between mb-6">
-        <h3 className="text-2xl font-bold text-text">🔥 Most Popular Games</h3>
+        <h3 className="text-2xl pixel-title text-text">🔥 Most Popular Games</h3>
         <button 
           onClick={() => router.push('/games')}
           className="text-text hover:text-brand text-sm font-semibold transition-colors"
@@ -100,7 +100,7 @@ export default function RelatedGames({ enabled = true, excludeGameId }: RelatedG
         {popularGames.map((game) => (
           <div
             key={game.id}
-            className="group bg-card rounded-xl p-4 border border-border hover:border-brand hover:shadow-hover transition-all duration-300 cursor-pointer transform hover:scale-[1.02]"
+            className="group pixel-card pixel-card-hover p-4 cursor-pointer"
             onMouseEnter={() => setHoveredGame(game.id)}
             onMouseLeave={() => setHoveredGame(null)}
           >
@@ -136,11 +136,7 @@ export default function RelatedGames({ enabled = true, excludeGameId }: RelatedG
             </div>
             
             <button 
-              className={`w-full py-2 px-4 rounded-lg font-semibold text-sm transition-all duration-200 ${
-                hoveredGame === game.id
-                  ? 'bg-brand text-brand-foreground shadow-button transform scale-105'
-                  : 'bg-card border border-border text-text hover:bg-gray-50'
-              }`}
+              className={`w-full pixel-button ${hoveredGame === game.id ? '' : ''}`}
               onClick={() => handlePlayGame(game.slug || game.title.toLowerCase().replace(/\s+/g, '-'))}
             >
               {hoveredGame === game.id ? '🚀 Play Now' : 'Play Game'}

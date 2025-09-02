@@ -6,7 +6,7 @@ export default function Home() {
   const page = siteLayout
   return (
     <ContentProvider content={{}}>
-      <main className="bg-bg">
+      <main>
         {page ? <PageRenderer sections={page.sections} /> : null}
       </main>
     </ContentProvider>

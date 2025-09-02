@@ -24,7 +24,7 @@ export default function FAQSection({ game }: Props) {
   }
 
   return (
-    <section id="faq" className="py-16 px-4 bg-bg" itemScope itemType="https://schema.org/FAQPage">
+    <section id="faq" className="py-16 px-4" itemScope itemType="https://schema.org/FAQPage">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-8">
@@ -62,4 +62,3 @@ export default function FAQSection({ game }: Props) {
     </section>
   )
 }
-

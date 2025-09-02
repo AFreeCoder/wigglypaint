@@ -91,8 +91,10 @@ export default function RootLayout({
             />
           </>
         )}
-        {children}
-        <Footer />
+        <div className="pixel-grid-lg">
+          {children}
+          <Footer />
+        </div>
         <ThemeToggleBar />
         {/* SEO: JSON-LD for WebSite and Organization */}
         <SiteJsonLd />

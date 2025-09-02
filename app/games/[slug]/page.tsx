@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation'
 import { Metadata } from 'next'
 import FullscreenButton from '@/components/FullscreenButton'
 import ResponsiveIframe from '@/components/ResponsiveIframe'
+import PixelWindow from '@/components/PixelWindow'
 import { getGameBySlug } from '@/utils/gameUtils'
 import { PageRenderer } from '@/app/_layout/renderer'
 import { gameLayoutSections } from '@/config/game-layout'
@@ -58,7 +59,7 @@ export default async function GamePage({ params }: { params: Promise<{ slug: str
 
   // 游戏主内容组件
   const gameContent = game.type === 'iframe' && game.url ? (
-    <div className="bg-card border border-border rounded-xl shadow-sm overflow-hidden w-full">
+    <PixelWindow title={game.title}>
       {/* 游戏iframe（响应式比例盒方案） */}
       <ResponsiveIframe
         id="game-iframe"
@@ -81,7 +82,7 @@ export default async function GamePage({ params }: { params: Promise<{ slug: str
         </div>
         <FullscreenButton iframeId="game-iframe" />
       </div>
-    </div>
+    </PixelWindow>
   ) : (
     <div className="bg-card border border-border rounded-xl shadow-sm p-8 text-center">
       <div className="text-6xl mb-6">{game.image}</div>
@@ -133,7 +134,7 @@ export default async function GamePage({ params }: { params: Promise<{ slug: str
 
   return (
     <ContentProvider content={{}}>
-      <main className="bg-bg">
+      <main>
         <PageRenderer sections={sections} />
       </main>
     </ContentProvider>

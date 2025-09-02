@@ -1,7 +1,7 @@
 export type IframePolicy = {
   allow: string
   sandbox?: string
-  referrerPolicy?: React.IframeHTMLAttributes<HTMLIFrameElement>['referrerPolicy']
+  referrerPolicy?: string
 }
 
 export const DEFAULT_IFRAME_POLICY: IframePolicy = {
@@ -21,4 +21,3 @@ export function getIframePolicyFor(url?: string): IframePolicy {
     return DEFAULT_IFRAME_POLICY
   }
 }
-

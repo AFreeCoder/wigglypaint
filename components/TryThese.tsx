@@ -76,9 +76,9 @@ export default function TryThese({ enabled = true, excludeGameId }: TryTheseProp
   }
 
   return (
-    <div className="bg-card border border-border rounded-xl shadow-sm p-4">
+    <div className="pixel-card pixel-card-hover p-4">
       <div className="flex items-center justify-between mb-4">
-        <h3 className="text-lg font-bold text-text flex items-center">
+        <h3 className="text-lg pixel-title text-text flex items-center">
           ⚡ Try These
         </h3>
         <button 
@@ -94,9 +94,9 @@ export default function TryThese({ enabled = true, excludeGameId }: TryTheseProp
         {games.map((game) => (
           <div
             key={game.id}
-            className={`group flex items-center space-x-3 p-3 rounded-lg cursor-pointer transition-all duration-200 border ${
+            className={`group flex items-center space-x-3 p-3 cursor-pointer transition-colors border ${
               hoveredGame === game.id 
-                ? 'bg-gray-light border-brand shadow-sm' 
+                ? 'bg-gray-light border-brand' 
                 : 'bg-card border-border hover:bg-gray-50 hover:border-brand'
             }`}
             onMouseEnter={() => setHoveredGame(game.id)}
@@ -126,7 +126,7 @@ export default function TryThese({ enabled = true, excludeGameId }: TryTheseProp
           {games.map((game) => (
             <div
               key={game.id}
-              className="group flex-shrink-0 w-32 bg-card rounded-lg p-3 border-2 border-border hover:border-brand hover:shadow-sm cursor-pointer transition-all duration-200"
+              className="group flex-shrink-0 w-32 bg-card p-3 border-2 border-border hover:border-brand cursor-pointer transition-colors"
               onClick={() => handlePlayGame(game.slug || game.title.toLowerCase().replace(/\s+/g, '-'))}
             >
               <div className="text-center">

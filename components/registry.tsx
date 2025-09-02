@@ -17,7 +17,7 @@ function Section({ id, className, children }: { id?: string, className?: string,
 
 // Hero: 主展示区，内嵌我们的 Game 组件
 const Hero = (props: any) => (
-  <Section id="hero" className="py-8 px-0 bg-bg">
+  <Section id="hero" className="py-8 px-0">
     <div className="max-w-6xl mx-auto">
       <div className="bg-card border border-border rounded-xl shadow-sm p-0">
         {props?.content ? props.content : <Game />}
@@ -28,7 +28,7 @@ const Hero = (props: any) => (
 
 // PopularGames: 使用我们现有的热门游戏组件
 const PopularGames = (props: any) => (
-  <Section id="popular-games" className="py-12 px-4 bg-bg">
+  <Section id="popular-games" className="py-12 px-4">
     <div className="max-w-6xl mx-auto">
       <RelatedGames enabled excludeGameId={undefined} />
     </div>
@@ -37,7 +37,7 @@ const PopularGames = (props: any) => (
 
 // VariantGrid: 使用我们右侧/移动端快速推荐组件作为变体网格
 const VariantGrid = (props: any) => (
-  <Section id="variant-grid" className="py-12 px-4 bg-card">
+  <Section id="variant-grid" className="py-12 px-4 pixel-grid-lg">
     <div className="max-w-6xl mx-auto">
       <TryThese enabled />
     </div>

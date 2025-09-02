@@ -16,14 +16,14 @@ export const siteLayout: PageConfig = {
   path: '/',
   sections: [
     { key: 'Hero', visible: true, props: { ctaPrimary: 'Play Now' } },
-    { key: 'Ad', visible: true, props: { slotId: 'AD-1', size: 'leaderboard' } },
+    { key: 'Ad', visible: false, props: { slotId: 'AD-1', size: 'leaderboard' } },
     { key: 'PopularGames', visible: true },
-    { key: 'Ad', visible: true, props: { slotId: 'AD-2', size: 'rectangle' } },
-    { key: 'VariantGrid', visible: true },
-    { key: 'Ad', visible: true, props: { slotId: 'AD-3', size: 'leaderboard' } },
+    { key: 'Ad', visible: false, props: { slotId: 'AD-2', size: 'rectangle' } },
+    { key: 'VariantGrid', visible: false },
+    { key: 'Ad', visible: false, props: { slotId: 'AD-3', size: 'leaderboard' } },
     { key: 'HowToPlay', visible: true },
     { key: 'FAQ', visible: true },
-    { key: 'Ad', visible: true, props: { slotId: 'AD-4', size: 'leaderboard' } },
+    { key: 'Ad', visible: false, props: { slotId: 'AD-4', size: 'leaderboard' } },
   ],
 }
 
