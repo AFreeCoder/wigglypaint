@@ -19,6 +19,7 @@ export type GameDifficulty = Exclude<typeof GAME_DIFFICULTIES[number], 'All'>
 
 // 导入其他类型定义
 import { GameInfo } from '@/types/game'
+import { slugify } from '@/utils/slug'
 
 export interface Game {
   id: number
@@ -95,7 +96,7 @@ export const GAMES: Game[] = [
         ]
       },
       howToPlay: {
-        title: 'Master the Art of Living Lines',
+        title: 'How to Play?',
         steps: [
           { step: 1, icon: '🚀', title: 'Launch WigglyPaint', description: 'Open WigglyPaint instantly in your browser - no downloads or signups required' },
           { step: 2, icon: '🎨', title: 'Choose Your Brush', description: 'Select from 8 animated brushes on the right panel, each with unique wiggly personality' },
@@ -141,7 +142,7 @@ export const GAMES: Game[] = [
         },
         {
           question: 'Do I need to download or install anything?',
-          answer: 'No downloads required! WigglyPaint runs instantly in your web browser. You can even bookmark WigglyPaint or save the page offline for use without internet connection.'
+          answer: 'No downloads required! WigglyPaint runs instantly in your web browser.'
         },
         {
           question: 'What type of art can I create with WigglyPaint?',
@@ -211,7 +212,7 @@ export const GAMES: Game[] = [
         ]
       },
       howToPlay: {
-        title: 'Master OVO Unblocked: From Beginner to Parkour Pro',
+        title: 'How to Play?',
         steps: [
           { step: 1, icon: '🎮', title: 'Get Started with OVO Unblocked', description: 'Launch OVO Unblocked in your browser - no downloads or registration required. OVO Unblocked loads quickly on any device!' },
           { step: 2, icon: '←→', title: 'Basic Movement', description: 'Use left and right arrow keys to move your stickman character smoothly across platforms' },
@@ -279,7 +280,7 @@ export const GAMES: Game[] = [
   },
   {
     id: 3,
-    title: 'Make Pixel Art Online - Pixilart.com',
+    title: 'Make Pixel Art Online',
     description: 'Create Pixel Art Online with this powerful digital art tool. Make Pixel Art Online sprites, GIF animations, and join 2M+ artists to collaborate, share, and explore Pixel Art Online creativity.',
     image: '🎮',
     category: 'Casual',
@@ -330,7 +331,7 @@ export const GAMES: Game[] = [
         ]
       },
       howToPlay: {
-        title: 'Master Pixel Art Online Creation with Pixilart',
+        title: 'How to Play?',
         steps: [
           { step: 1, icon: '🚀', title: 'Start Creating', description: 'Visit pixilart.com/draw to launch the Pixel Art Online drawing tool instantly in your browser' },
           { step: 2, icon: '🎨', title: 'Choose Your Canvas', description: 'Select canvas size and resolution perfect for your Pixel Art Online project - sprites, or animations' },
@@ -401,7 +402,7 @@ export const GAMES: Game[] = [
 // 自动生成slug
 export const GAMES_WITH_SLUGS = GAMES.map(game => ({
   ...game,
-  slug: game.title.toLowerCase().replace(/\s+/g, '-')
+  slug: slugify(game.title)
 }))
 
 

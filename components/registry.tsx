@@ -6,6 +6,10 @@ import TryThese from '@/components/TryThese'
 import HowToPlaySection from '@/components/HowToPlaySection'
 import FAQSection from '@/components/FAQSection'
 import AdSpace from '@/components/AdSpace'
+import FeaturesSection from '@/components/FeaturesSection'
+import { HOMEPAGE_GAME, GAMES_WITH_SLUGS } from '@/config/games'
+import IntroSection from '@/components/IntroSection'
+import ProTipsSection from '@/components/ProTipsSection'
 
 function Section({ id, className, children }: { id?: string, className?: string, children: React.ReactNode }) {
   return (
@@ -45,9 +49,11 @@ const VariantGrid = (props: any) => (
 )
 
 // HowToPlay/FAQ: 模板分区锚点，改为独立分区组件（含 Schema 标注）
-const HowToPlay = (props: any) => <HowToPlaySection game={props?.game} />
+const homepageGame = GAMES_WITH_SLUGS.find(g => g.id === HOMEPAGE_GAME.id)
 
-const FAQ = (props: any) => <FAQSection game={props?.game} />
+const HowToPlay = (props: any) => <HowToPlaySection game={props?.game ?? homepageGame} />
+
+const FAQ = (props: any) => <FAQSection game={props?.game ?? homepageGame} />
 
 // Ad 占位：用底部广告位样式包裹（保留布局占位，不改内容）
 const Ad = ({ slotId, size, className, ...rest }: any) => (
@@ -58,11 +64,21 @@ const Ad = ({ slotId, size, className, ...rest }: any) => (
   </Section>
 )
 
+// Features SEO body section
+const Features = () => <FeaturesSection />
+
+// Intro / ProTips（方案B新增）
+const Intro = (props: any) => <IntroSection game={props?.game ?? homepageGame} />
+const ProTips = (props: any) => <ProTipsSection game={props?.game ?? homepageGame} />
+
 export const registry: Record<string, React.ComponentType<any>> = {
   Hero,
   PopularGames,
+  Intro,
+  ProTips,
   VariantGrid,
   HowToPlay,
   FAQ,
   Ad,
+  Features,
 }

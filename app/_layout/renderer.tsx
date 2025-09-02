@@ -3,7 +3,7 @@ import React from 'react'
 import { registry } from '@/components/registry'
 
 export type SectionKey =
-  | 'Hero' | 'PopularGames' | 'VariantGrid' | 'HowToPlay' | 'FAQ' | 'Ad'
+  | 'Hero' | 'PopularGames' | 'Intro' | 'HowToPlay' | 'ProTips' | 'FAQ' | 'VariantGrid' | 'Ad' | 'Features'
 
 export type SectionConfig = {
   key: SectionKey
@@ -22,4 +22,3 @@ export function PageRenderer({ sections }: { sections: SectionConfig[] }) {
     </>
   )
 }
-

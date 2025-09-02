@@ -1,8 +1,9 @@
 import type { MetadataRoute } from 'next'
 import { GAMES_WITH_SLUGS } from '@/config/games'
+import { getBaseUrl } from '@/config/site'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = 'https://wigglypaint.co'
+  const base = getBaseUrl()
   const now = new Date()
 
   const staticRoutes: MetadataRoute.Sitemap = [
@@ -19,4 +20,3 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [...staticRoutes, ...gameRoutes]
 }
-

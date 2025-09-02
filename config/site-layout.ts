@@ -1,5 +1,5 @@
 export type SectionKey =
-  | 'Hero' | 'PopularGames' | 'VariantGrid' | 'HowToPlay' | 'FAQ' | 'Ad'
+  | 'Hero' | 'PopularGames' | 'Intro' | 'HowToPlay' | 'ProTips' | 'FAQ' | 'VariantGrid' | 'Ad' | 'Features'
 
 export type SectionConfig = {
   key: SectionKey
@@ -16,14 +16,16 @@ export const siteLayout: PageConfig = {
   path: '/',
   sections: [
     { key: 'Hero', visible: true, props: { ctaPrimary: 'Play Now' } },
-    { key: 'Ad', visible: false, props: { slotId: 'AD-1', size: 'leaderboard' } },
     { key: 'PopularGames', visible: true },
+    { key: 'Ad', visible: false, props: { slotId: 'AD-1', size: 'leaderboard' } },
+    { key: 'Intro', visible: true },
     { key: 'Ad', visible: false, props: { slotId: 'AD-2', size: 'rectangle' } },
-    { key: 'VariantGrid', visible: false },
-    { key: 'Ad', visible: false, props: { slotId: 'AD-3', size: 'leaderboard' } },
     { key: 'HowToPlay', visible: true },
+    { key: 'ProTips', visible: true },
     { key: 'FAQ', visible: true },
+    { key: 'Ad', visible: false, props: { slotId: 'AD-3', size: 'leaderboard' } },
+    { key: 'Features', visible: false },
+    { key: 'VariantGrid', visible: false },
     { key: 'Ad', visible: false, props: { slotId: 'AD-4', size: 'leaderboard' } },
   ],
 }
-

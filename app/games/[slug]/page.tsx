@@ -7,6 +7,7 @@ import { getGameBySlug } from '@/utils/gameUtils'
 import { PageRenderer } from '@/app/_layout/renderer'
 import { gameLayoutSections } from '@/config/game-layout'
 import { ContentProvider } from '@/components/content-provider'
+import { getBaseUrl } from '@/config/site'
 
 // 生成动态metadata，优化SEO
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
@@ -27,7 +28,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     openGraph: {
       title: `${game.title} - Animated Drawing Tool | WigglyPaint`,
       description: `${game.description} Create living, wiggly art that moves and breathes!`,
-      url: `https://wigglypaint.co/games/${slug}`,
+      url: `${getBaseUrl()}/games/${slug}`,
       siteName: 'WigglyPaint',
       images: [
         {
@@ -46,7 +47,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       images: ['/twitter-image.png'],
     },
     alternates: {
-      canonical: `https://wigglypaint.co/games/${slug}`,
+      canonical: `${getBaseUrl()}/games/${slug}`,
     },
   }
 }
