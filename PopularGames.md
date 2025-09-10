@@ -44,4 +44,6 @@
 ----
 prompt:
 
-调研第二个游戏Drawaria.online,搜索获取PopularGames中新增游戏所需要的信息,同时获取该游戏的 html 资源文件,如果找不到,可以给一些有可能获取到游戏资源文件的网址.将获取到的信息写到Drawaria.online.md 中
+调研第三个个游戏Sandspiel,搜索获取PopularGames中新增游戏所需要的信息,同时获取该游戏的 html 资源文件,如果找不到,可以给一些有可能获取到游戏资源文件的网址.将获取到的信息写到Sandspiel.md 中
+
+根据Sandspiel.md中的内容,在PopularGames 区域新增这个游戏
