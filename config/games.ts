@@ -773,6 +773,135 @@ export const GAMES: Game[] = [
         }
       ]
     }
+  },
+  {
+    id: 7,
+    title: 'WebGL Fluid Simulation',
+    description: 'Mesmerizing GPU-powered fluid dynamics simulation! Interact with realistic flowing liquids, create beautiful patterns, and explore fluid physics in your browser.',
+    image: '💧',
+    category: 'Casual',
+    tags: ['Creative', 'Skill'],
+    difficulty: 'Easy',
+    players: '1 Player',
+    rating: 4.6,
+    playCount: '100K+',
+    type: 'iframe',
+    url: 'https://paveldogreat.github.io/WebGL-Fluid-Simulation/',
+    width: 1280,
+    height: 720,
+    gameInfo: {
+      introduction: {
+        title: 'WebGL Fluid Simulation: Interactive Fluid Dynamics',
+        description: 'Experience the beauty of fluid dynamics in real-time with this stunning WebGL simulation! Created by Pavel Dobryakov, this GPU-powered demonstration brings the complex physics of flowing liquids to your browser. Watch mesmerizing patterns emerge as you interact with the fluid, create swirls and eddies with your mouse or touch, and explore the fascinating world of computational fluid dynamics. Perfect for relaxation, creativity, or understanding the science behind fluid motion.',
+        features: [
+          {
+            icon: '🌊',
+            title: 'Real-time Fluid Physics',
+            description: 'Advanced GPU computation creates realistic fluid behavior with natural flow, viscosity, and turbulence effects'
+          },
+          {
+            icon: '🎨',
+            title: 'Interactive Manipulation',
+            description: 'Click, drag, and swipe to disturb the fluid - watch your interactions create beautiful, swirling patterns'
+          },
+          {
+            icon: '📱',
+            title: 'Mobile-Optimized',
+            description: 'Smooth performance on both desktop and mobile devices with touch-responsive fluid interaction'
+          },
+          {
+            icon: '⚡',
+            title: 'GPU-Accelerated',
+            description: 'Utilizes WebGL for high-performance rendering, delivering smooth animations even with complex fluid calculations'
+          },
+          {
+            icon: '🎛️',
+            title: 'Customizable Parameters',
+            description: 'Adjust fluid density, viscosity, vorticity, and other physical properties to create different fluid behaviors'
+          },
+          {
+            icon: '🌈',
+            title: 'Beautiful Visualizations',
+            description: 'Stunning color gradients and particle effects make fluid motion visually captivating and artistic'
+          },
+          {
+            icon: '🔬',
+            title: 'Educational Value',
+            description: 'Learn about fluid dynamics, physics simulation, and computational graphics through interactive experimentation'
+          },
+          {
+            icon: '🆓',
+            title: 'Open Source & Free',
+            description: 'MIT licensed project available on GitHub - completely free to use and modify for educational purposes'
+          }
+        ]
+      },
+      howToPlay: {
+        title: 'How to Play?',
+        steps: [
+          { step: 1, title: 'Launch the Simulation', description: 'Open the WebGL Fluid Simulation in your browser - it loads instantly with no downloads required' },
+          { step: 2, title: 'Interact with the Fluid', description: 'Click and drag your mouse (or touch on mobile) across the screen to disturb the fluid and create movement' },
+          { step: 3, title: 'Experiment with Patterns', description: 'Try different gestures: quick swipes create turbulence, slow movements generate smooth flows' },
+          { step: 4, title: 'Access Settings Panel', description: 'Click the settings icon to reveal controls for density, viscosity, vorticity, and other fluid properties' },
+          { step: 5, title: 'Adjust Fluid Properties', description: 'Modify parameters like density for thicker/thinner fluids, or vorticity for more/less swirling motion' },
+          { step: 6, title: 'Create Art with Motion', description: 'Use the fluid as a creative canvas - your interactions become temporary art that flows and evolves' },
+          { step: 7, title: 'Explore Different Modes', description: 'Try various visualization modes and color schemes to see different aspects of fluid behavior' },
+          { step: 8, title: 'Learn and Relax', description: 'Enjoy the meditative qualities of fluid motion while learning about physics and computational graphics' }
+        ],
+        tips: [
+          'Gentle, slow movements create smooth, laminar flow patterns that are calming to watch',
+          'Quick, sharp gestures generate turbulent eddies and chaotic but beautiful swirling motions',
+          'Try circular motions to create persistent vortexes that slowly dissipate over time',
+          'Lower density settings make the fluid more responsive to your interactions',
+          'Higher viscosity creates thicker, honey-like fluid behavior that moves more slowly',
+          'Experiment with different browser zoom levels for varied interaction precision',
+          'The simulation works great as a screensaver or background for relaxation',
+          'Mobile users can use multi-touch gestures to create complex fluid interactions'
+        ]
+      },
+      faq: [
+        {
+          question: 'What is WebGL Fluid Simulation and how does it work?',
+          answer: 'WebGL Fluid Simulation is a real-time fluid dynamics simulation that runs in your web browser using GPU acceleration. It solves complex mathematical equations governing fluid motion (Navier-Stokes equations) to create realistic liquid behavior that responds to your mouse or touch interactions.'
+        },
+        {
+          question: 'Who created this fluid simulation?',
+          answer: 'The simulation was created by Pavel Dobryakov (PavelDoGreat) and was featured on Google Experiments in October 2017. It\'s based on research from NVIDIA GPU Gems and represents cutting-edge computational fluid dynamics techniques.'
+        },
+        {
+          question: 'Can I use this on mobile devices?',
+          answer: 'Yes! The simulation is specifically optimized for mobile browsers and supports touch interactions. You can swipe and tap to disturb the fluid, making it perfect for tablets and smartphones with WebGL-capable browsers.'
+        },
+        {
+          question: 'What can I adjust in the fluid simulation?',
+          answer: 'You can modify various fluid properties including density (thickness), viscosity (stickiness), vorticity (swirling tendency), pressure, and visualization modes. These parameters let you simulate different types of fluids from water to honey.'
+        },
+        {
+          question: 'Is this educational or just for entertainment?',
+          answer: 'Both! While the simulation is mesmerizing and relaxing to interact with, it\'s also an excellent educational tool for understanding fluid dynamics, physics simulation, and computational graphics. It demonstrates real scientific principles in an accessible way.'
+        },
+        {
+          question: 'Does this work offline or require internet?',
+          answer: 'After initial loading, the simulation runs entirely in your browser using local GPU computation. However, you need internet to first access the webpage. The simulation doesn\'t send any data to servers during use.'
+        },
+        {
+          question: 'What technology powers this simulation?',
+          answer: 'The simulation uses WebGL for GPU-accelerated computing and rendering, JavaScript for the user interface and interaction handling, and advanced shader programming to solve fluid dynamics equations in real-time on your graphics card.'
+        },
+        {
+          question: 'Can I save or record my fluid interactions?',
+          answer: 'The simulation itself doesn\'t have built-in recording features, but you can use screen recording software or browser extensions to capture your fluid art creations. The patterns you create are temporary and constantly evolving.'
+        },
+        {
+          question: 'Is the source code available?',
+          answer: 'Yes! The project is open-source under the MIT license and available on GitHub at PavelDoGreat/WebGL-Fluid-Simulation. Developers can study the code, modify it, and create their own fluid simulations.'
+        },
+        {
+          question: 'What browsers support this fluid simulation?',
+          answer: 'The simulation works on any modern browser that supports WebGL, including Chrome, Firefox, Safari, and Edge. Mobile browsers on iOS and Android also support the simulation with touch interactions.'
+        }
+      ]
+    }
   }
 ]
 
