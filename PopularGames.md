@@ -39,3 +39,9 @@
    - 类型：休闲像素填色 / 经典 2048  
    - 特点：承接更广人群，放松消磨时间  
    - 资源路径：[GameDistribution](https://gamedistribution.com/) → 官方 Embed 代码
+
+
+----
+prompt:
+
+调研第二个游戏Drawaria.online,搜索获取PopularGames中新增游戏所需要的信息,同时获取该游戏的 html 资源文件,如果找不到,可以给一些有可能获取到游戏资源文件的网址.将获取到的信息写到Drawaria.online.md 中

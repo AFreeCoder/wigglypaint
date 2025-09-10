@@ -515,6 +515,135 @@ export const GAMES: Game[] = [
         }
       ]
     }
+  },
+  {
+    id: 5,
+    title: 'Drawaria.online',
+    description: 'Free multiplayer drawing and guessing game! Join players worldwide in Pictionary-style rooms, take turns drawing secret words while others guess to earn points.',
+    image: '✏️',
+    category: 'Casual',
+    tags: ['Drawing', 'Multiplayer', 'Skill'],
+    difficulty: 'Easy',
+    players: 'Multiplayer',
+    rating: 4.5,
+    playCount: '10K+',
+    type: 'iframe',
+    url: 'https://drawaria.online/',
+    width: 1024,
+    height: 1024,
+    gameInfo: {
+      introduction: {
+        title: 'Drawaria.online: Multiplayer Drawing & Guessing Game',
+        description: 'Join the fun in Drawaria.online, a free multiplayer drawing and guessing game that brings the classic Pictionary experience online! Draw secret words while other players race to guess, or put your guessing skills to the test as others create their masterpieces. With multiple game modes, customizable rooms, and a vibrant community, Drawaria.online offers endless entertainment for players of all ages.',
+        features: [
+          {
+            icon: '🎨',
+            title: 'Pictionary Game Mode',
+            description: 'Classic drawing and guessing gameplay with scoring system - first to guess gets 3 points, drawer gets 2 points'
+          },
+          {
+            icon: '🎪',
+            title: 'Playground Mode',
+            description: 'Free drawing mode where you can create art without time limits and upload your creations to the community gallery'
+          },
+          {
+            icon: '👥',
+            title: 'Public & Private Rooms',
+            description: 'Join public rooms with players worldwide or create private rooms to play with friends and family'
+          },
+          {
+            icon: '🏆',
+            title: 'Scoring & Leaderboards',
+            description: 'Earn points for correct guesses and successful drawings, compete on global scoreboards and track your progress'
+          },
+          {
+            icon: '🖼️',
+            title: 'Community Gallery',
+            description: 'Browse and share artwork in the community gallery with categories like Vanilla, Pixel Art, Stencils, and Algo Tools'
+          },
+          {
+            icon: '🌍',
+            title: 'Multilingual Support',
+            description: 'Play in English, Russian (Русский), or Spanish (Español) with international player community'
+          },
+          {
+            icon: '📱',
+            title: 'Cross-Platform Play',
+            description: 'Available on web browsers and mobile app for Android, play anywhere with seamless online connectivity'
+          },
+          {
+            icon: '💬',
+            title: 'Chat & Social Features',
+            description: 'Real-time chat, player profiles, Discord community, and social interaction tools with reporting system'
+          }
+        ]
+      },
+      howToPlay: {
+        title: 'How to Play?',
+        steps: [
+          { step: 1, title: 'Choose Game Mode', description: 'Select Pictionary for competitive drawing/guessing or Playground for free drawing mode' },
+          { step: 2, title: 'Join or Create Room', description: 'Enter a public room to play with others or create a private room for friends' },
+          { step: 3, title: 'Drawing Your Turn', description: 'When it\'s your turn, select from 3 word choices (press 1, 2, or 3 keys) and draw the secret word' },
+          { step: 4, title: 'Use Drawing Tools', description: 'Left mouse to draw, right mouse to erase, mouse wheel to change brush size, use the color palette' },
+          { step: 5, title: 'Guessing Phase', description: 'Type your guesses in the chat when others are drawing - first correct guess earns 3 points' },
+          { step: 6, title: 'Earn Points', description: 'Drawer gets 2 points for first correct guess, other players get 1 point if they guess within 10 seconds' },
+          { step: 7, title: 'Share Your Art', description: 'Save your best drawings to the community gallery from the room menu' },
+          { step: 8, title: 'Build Your Profile', description: 'Login with Google/Facebook to track scores, save progress, and build your player profile' }
+        ],
+        tips: [
+          'Use simple, clear drawings - abstract concepts can be shown through symbols and actions',
+          'Pay attention to the word category hints and letter count to improve your guessing accuracy',
+          'Practice in Playground mode to improve your drawing skills before joining competitive rooms',
+          'Use the mouse wheel to quickly adjust brush size for detailed work or bold strokes',
+          'Watch other players\' drawing techniques in the gallery to learn new artistic approaches',
+          'Join the Discord community to find regular players and participate in events',
+          'Report inappropriate content using the reporting system to keep the community friendly',
+          'Try the mobile app for drawing on-the-go with touch controls optimized for smaller screens'
+        ]
+      },
+      faq: [
+        {
+          question: 'How does the scoring system work in Drawaria.online?',
+          answer: 'In Pictionary mode, the first player to guess correctly gets 3 points, the drawer receives 2 points for the first correct answer, and other players who guess within 10 seconds get 1 point each. The player with the most points at the end wins!'
+        },
+        {
+          question: 'What\'s the difference between Pictionary and Playground modes?',
+          answer: 'Pictionary is the competitive drawing and guessing game with time limits and scoring. Playground is a free drawing mode where you can create art without time pressure and upload your creations to the community gallery.'
+        },
+        {
+          question: 'Can I play Drawaria.online on mobile devices?',
+          answer: 'Yes! Drawaria.online has a dedicated Android mobile app available on Google Play Store, plus the web version works on mobile browsers with touch-optimized controls.'
+        },
+        {
+          question: 'How do I create a private room to play with friends?',
+          answer: 'Click "Create Room" from the main menu, set your room preferences, and share the room code with friends. You can customize room settings like time limits, word categories, and player limits.'
+        },
+        {
+          question: 'What languages does Drawaria.online support?',
+          answer: 'The game supports English, Russian (Русский), and Spanish (Español). You can change the language from the main menu dropdown to play with international communities.'
+        },
+        {
+          question: 'How do I upload my drawings to the gallery?',
+          answer: 'In any room (Pictionary or Playground), click the menu button on the right side and select "Send your latest drawing to gallery". Your artwork will be reviewed and added to the community gallery.'
+        },
+        {
+          question: 'What are the gallery categories like Vanilla, Stencils, and Pixel Art?',
+          answer: 'These are filtering categories for different art styles: Vanilla for standard drawings, Stencils for template-based art, Pixel Art for retro-style creations, and Algo Tools for digitally-assisted artwork.'
+        },
+        {
+          question: 'How do I report inappropriate content or players?',
+          answer: 'Use the player menu buttons to hide drawings, mute players, vote kick, or report abusive behavior. The game has strict community guidelines against inappropriate content and harassment.'
+        },
+        {
+          question: 'Do I need to create an account to play?',
+          answer: 'You can play as a guest with just a username, but logging in with Google or Facebook lets you save your progress, track scores on leaderboards, and maintain your player profile across sessions.'
+        },
+        {
+          question: 'What drawing controls are available?',
+          answer: 'Left mouse button to draw, right mouse button to erase, mouse wheel to change brush size, keyboard for chat, and number keys (1, 2, 3) to quickly select word choices when it\'s your turn to draw.'
+        }
+      ]
+    }
   }
 ]
 
