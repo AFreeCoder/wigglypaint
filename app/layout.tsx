@@ -50,13 +50,8 @@ export const metadata: Metadata = {
     creator: '@wigglypaint',
   },
   icons: {
-    icon: [
-      { url: '/icon-16x16.png', sizes: '16x16', type: 'image/png' },
-      { url: '/icon-32x32.png', sizes: '32x32', type: 'image/png' },
-    ],
-    apple: [
-      { url: '/apple-touch-icon.png', sizes: '180x180' },
-    ],
+    icon: '/favicon.png',
+    apple: '/favicon.png',
     other: [
       { rel: 'mask-icon', url: '/safari-pinned-tab.svg', color: '#3B82F6' },
     ],
