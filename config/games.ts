@@ -902,6 +902,135 @@ export const GAMES: Game[] = [
         }
       ]
     }
+  },
+  {
+    id: 8,
+    title: 'JS Paint',
+    description: 'Classic Microsoft Paint reimagined for the web! Complete digital art creation with familiar tools, unlimited undo, themes, and accessibility features.',
+    image: '🎨',
+    category: 'Casual',
+    tags: ['Drawing', 'Creative', 'Pixel Art'],
+    difficulty: 'Easy',
+    players: '1 Player',
+    rating: 4.8,
+    playCount: '500K+',
+    type: 'iframe',
+    url: 'https://jspaint.app/',
+    width: 1200,
+    height: 800,
+    gameInfo: {
+      introduction: {
+        title: 'JS Paint: Classic MS Paint REVIVED',
+        description: 'Step back into the golden age of digital art with JS Paint, a pixel-perfect recreation of the beloved Microsoft Paint! This web-based masterpiece brings all the nostalgic charm of classic Paint into the modern era, complete with enhanced features, accessibility options, and multilingual support. Whether you\'re creating pixel art, editing images, or just having fun with digital brushes, JS Paint delivers the authentic experience you remember with the convenience of modern web technology.',
+        features: [
+          {
+            icon: '🖌️',
+            title: 'Complete Tool Collection',
+            description: 'All classic MS Paint tools: Brush, Pencil, Eraser, Fill, Line, Rectangle, Ellipse, Polygon, Text, and Selection tools'
+          },
+          {
+            icon: '🎨',
+            title: 'Advanced Color Support',
+            description: 'Full color palette editing, transparency support, and custom color creation with RGB and HSL controls'
+          },
+          {
+            icon: '🌍',
+            title: '26 Language Support',
+            description: 'Authentic localizations extracted from Windows 98 MS Paint, supporting languages from English to Japanese'
+          },
+          {
+            icon: '♿',
+            title: 'Accessibility Pioneer',
+            description: 'Eye Gaze Mode, Speech Recognition, Dwell Clicker, and screen reader support for inclusive digital art'
+          },
+          {
+            icon: '🎭',
+            title: 'Multiple Themes',
+            description: 'Classic, Modern, Dark/Light variants, plus special themes like Winter, Occult, and Bubblegum'
+          },
+          {
+            icon: '↩️',
+            title: 'Unlimited Undo/Redo',
+            description: 'Never lose your work with extensive undo history - go back through hundreds of steps'
+          },
+          {
+            icon: '📱',
+            title: 'Cross-Platform Ready',
+            description: 'Works on desktop, tablet, and mobile with touch support, pinch zoom, and responsive design'
+          },
+          {
+            icon: '💾',
+            title: 'Modern File Support',
+            description: 'Save as PNG, BMP, ICO, and more. Import images, edit transparencies, and work with modern formats'
+          }
+        ]
+      },
+      howToPlay: {
+        title: 'How to Play?',
+        steps: [
+          { step: 1, title: 'Choose Your Canvas', description: 'Start with a blank canvas or open an existing image file to edit. Resize your canvas as needed for your project' },
+          { step: 2, title: 'Select Drawing Tools', description: 'Pick from classic tools: Pencil for precise lines, Brush for artistic strokes, or specialized tools like Polygon and Curve' },
+          { step: 3, title: 'Pick Your Colors', description: 'Choose from the default palette, create custom colors with the color picker, or edit the entire palette to match your vision' },
+          { step: 4, title: 'Create Your Art', description: 'Draw, paint, and design using familiar MS Paint techniques. Use selection tools to move, copy, and transform parts of your image' },
+          { step: 5, title: 'Add Text and Shapes', description: 'Insert text with different fonts and sizes, or create geometric shapes with the Rectangle, Ellipse, and Polygon tools' },
+          { step: 6, title: 'Customize Your Experience', description: 'Switch themes, adjust accessibility settings, enable grid view, or use magnification for detailed pixel work' },
+          { step: 7, title: 'Save and Share', description: 'Save your masterpiece in multiple formats, copy to clipboard, or continue editing with the unlimited undo feature' },
+          { step: 8, title: 'Explore Advanced Features', description: 'Try Speech Recognition for hands-free control, or use Eye Gaze Mode for alternative input methods' }
+        ],
+        tips: [
+          'Hold Shift while using line tools to create perfectly straight horizontal, vertical, or diagonal lines',
+          'Use Ctrl+Z for undo and Ctrl+Y for redo - you have unlimited steps to experiment freely',
+          'Right-click to access context menus and additional options for tools and selections',
+          'The magnifier tool is perfect for detailed pixel art - zoom in to edit individual pixels precisely',
+          'Use the spray paint tool for artistic textures and the airbrush for smooth gradients',
+          'Experiment with different themes to find your preferred visual style and color scheme',
+          'Try Speech Recognition: say "red brush" or "large pencil" to switch tools hands-free',
+          'Enable grid view when creating pixel art or when you need precise alignment for your artwork'
+        ]
+      },
+      faq: [
+        {
+          question: 'Is JS Paint really like the original Microsoft Paint?',
+          answer: 'Yes! JS Paint is a pixel-perfect recreation of classic MS Paint, faithfully reproducing every tool, menu, and even obscure features from the original. It uses authentic localizations extracted from Windows 98 and maintains the exact same user interface and behavior you remember.'
+        },
+        {
+          question: 'What accessibility features does JS Paint offer?',
+          answer: 'JS Paint is a pioneer in accessible digital art tools, offering Eye Gaze Mode for hands-free cursor control, Speech Recognition for voice commands, Dwell Clicker for automatic clicking, screen reader support, and customizable interface options for users with different needs.'
+        },
+        {
+          question: 'Can I use JS Paint on my phone or tablet?',
+          answer: 'Absolutely! JS Paint is fully optimized for mobile devices with touch controls, pinch-to-zoom functionality, and a responsive interface. You can draw with your finger or stylus just like on desktop, making it perfect for digital art on the go.'
+        },
+        {
+          question: 'What file formats does JS Paint support?',
+          answer: 'JS Paint supports modern image formats including PNG (with transparency), BMP, ICO, and can import various image types. You can also save and load custom color palettes, making it compatible with both classic and modern workflows.'
+        },
+        {
+          question: 'How many languages does JS Paint support?',
+          answer: 'JS Paint supports 26 languages with authentic localizations extracted directly from Windows 98 MS Paint installations. This includes major languages like English, Spanish, French, German, Japanese, Chinese, and many others.'
+        },
+        {
+          question: 'Can I customize the appearance of JS Paint?',
+          answer: 'Yes! JS Paint offers multiple themes including Classic (original MS Paint look), Modern (updated design), Dark/Light variants, and fun themes like Winter, Occult, and Bubblegum. You can also customize color palettes and interface options.'
+        },
+        {
+          question: 'Is my artwork saved automatically?',
+          answer: 'JS Paint doesn\'t auto-save, maintaining the authentic MS Paint experience. You need to manually save your work using File > Save. However, you have unlimited undo/redo, so you can experiment freely without fear of losing progress during your session.'
+        },
+        {
+          question: 'Can I embed JS Paint in my own website?',
+          answer: 'Yes! JS Paint can be embedded in websites using iframe embedding. The project is open-source under MIT license, so developers can also integrate it directly into their applications or modify it for specific needs.'
+        },
+        {
+          question: 'Does JS Paint work offline?',
+          answer: 'Once loaded, JS Paint works offline for creating and editing artwork. However, you need an internet connection to initially access the application. There\'s also a desktop Electron version available for full offline use.'
+        },
+        {
+          question: 'What makes JS Paint different from other online drawing tools?',
+          answer: 'JS Paint focuses on authentically recreating the classic MS Paint experience rather than adding complex modern features. It\'s perfect for nostalgia, pixel art, simple image editing, and accessibility. The emphasis is on simplicity, familiarity, and inclusive design.'
+        }
+      ]
+    }
   }
 ]
 
