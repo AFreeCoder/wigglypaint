@@ -1,11 +1,11 @@
 // 先定义配置数组
 export const GAME_CATEGORIES = [
-  'All', 'Puzzle', 'Arcade', 'Strategy', 'Word', 'Education', 'Casual', 'Racing'
+  'All', 'Puzzle', 'Arcade', 'Strategy', 'Word', 'Education', 'Casual', 'Racing', 'Creative'
 ] as const
 
 export const GAME_TAGS = [
   'Speed', 'Cars', 'Racing', 'Parkour', 'Platform', 'Skill',
-  'Drawing', 'Animation', 'Creative', 'Pixel Art', 'Multiplayer'
+  'Drawing', 'Animation', 'Creative', 'Pixel Art', 'Multiplayer', 'Frame-by-Frame', 'GIF Maker'
 ] as const
 
 export const GAME_DIFFICULTIES = [

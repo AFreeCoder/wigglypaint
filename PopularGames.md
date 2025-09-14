@@ -30,10 +30,10 @@
    - 特点：支持多图层、笔刷，易上手  
    - 资源路径：[GitHub Klecks](https://github.com/klecks/klecks)（可嵌入版）  
 
-7. **Brush Ninja**  
-   - 类型：帧动画涂鸦 / GIF 生成  
-   - 特点：快速制作手绘动画，和 wigglypaint 动效理念呼应  
-   - 资源路径：[官方网站](https://brush.ninja/) → 提供嵌入教程  
+7. **Brush Ninja**
+   - 类型：帧动画制作 / 教育创作工具
+   - 特点：家庭友好的动画GIF制作器，支持洋葱皮效果、声音集成，广泛用于教育场景
+   - 资源路径：[官方嵌入系统](https://embed.brush.ninja/drawing.js) → Web Component 集成 或 [动画制作器](https://brush.ninja/create/animation-maker/)  
 
 8. **Pixel Fun: Color by Number / 2048**  
    - 类型：休闲像素填色 / 经典 2048  
@@ -44,6 +44,6 @@
 ----
 prompt:
 
-调研第6️六个游戏Kleki / Klecks,搜索获取PopularGames中新增游戏所需要的信息,同时获取该游戏的 html 资源文件,如果找不到,可以给一些有可能获取到游戏资源文件的网址.将获取到的信息写到Kleki-Klecks.md 中
+调研第67六个游戏Brush Ninja,搜索获取PopularGames中新增游戏所需要的信息,同时获取该游戏的 html 资源文件,如果找不到,可以给一些有可能获取到游戏资源文件的网址.将获取到的信息写到Brush-Ninja.md 中
 
-根据Kleki-Klecks.md中的内容,在PopularGames 区域新增这个游戏
+根据Brush-Ninja.md中的内容,在PopularGames 区域新增这个游戏
