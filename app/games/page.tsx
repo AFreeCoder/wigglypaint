@@ -116,49 +116,88 @@ export default function GamesPage() {
             </div>
 
             {/* 游戏列表 */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mb-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-6">
               {filteredGames.map((game) => (
                 <div
                   key={game.id}
-                  className="group pixel-card pixel-card-hover p-4 cursor-pointer"
+                  className="group pixel-card pixel-card-hover overflow-hidden cursor-pointer"
+                  onClick={() => handlePlayGame(game.slug!)}
                 >
-                  <div className="text-center mb-3">
-                    <div className="text-4xl mb-2 transform group-hover:scale-110 transition-transform duration-200">
-                      {game.image}
+                  {/* 游戏图片区域 */}
+                  <div className="relative w-full aspect-video bg-gradient-to-br from-purple-100 via-pink-100 to-blue-100 flex items-center justify-center overflow-hidden">
+                    {game.thumbnail ? (
+                      <>
+                        <img
+                          src={game.thumbnail}
+                          alt={game.title}
+                          className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
+                          onError={(e) => {
+                            // 图片加载失败时显示 emoji 作为降级方案
+                            e.currentTarget.style.display = 'none'
+                            const fallback = e.currentTarget.nextElementSibling
+                            if (fallback) fallback.classList.remove('hidden')
+                          }}
+                        />
+                        <div className="hidden text-8xl">
+                          {game.image}
+                        </div>
+                      </>
+                    ) : (
+                      <div className="text-8xl transform group-hover:scale-110 transition-transform duration-300">
+                        {game.image}
+                      </div>
+                    )}
+                    {/* 评分标签 */}
+                    <div className="absolute top-3 right-3 flex items-center space-x-1 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full shadow-sm">
+                      <span className="text-yellow-500 text-sm">⭐</span>
+                      <span className="text-xs font-semibold text-gray-700">{game.rating}</span>
                     </div>
-                    <div className="flex items-center justify-center space-x-1 text-xs mb-2">
-                      {renderStars(game.rating)}
+                    {/* 分类标签 */}
+                    <div className="absolute top-3 left-3">
+                      <span className={`inline-block border text-xs px-2 py-1 rounded-full font-medium bg-white/90 backdrop-blur-sm ${getCategoryColor(game.category)}`}>
+                        {game.category}
+                      </span>
                     </div>
                   </div>
-                  
-                  <h4 className="font-bold text-text mb-2 group-hover:text-brand transition-colors text-center">
-                    {game.title}
-                  </h4>
-                  
-                  <p className="text-sm text-gray-600 mb-3 line-clamp-2 leading-relaxed text-center">
-                    {game.description}
-                  </p>
-                  
-                  <div className="flex items-center justify-between mb-3">
-                    <span className={`inline-block border text-xs px-2 py-1 rounded-full font-medium ${getCategoryColor(game.category)}`}>
-                      {game.category}
-                    </span>
-                    <span className={`text-xs font-semibold ${getDifficultyColor(game.difficulty)}`}>
-                      {game.difficulty}
-                    </span>
+
+                  {/* 内容区域 */}
+                  <div className="p-4 flex flex-col">
+                    {/* 游戏名称 */}
+                    <h4 className="font-bold text-lg text-text mb-2 group-hover:text-brand transition-colors line-clamp-1">
+                      {game.title}
+                    </h4>
+
+                    {/* 游戏简介 */}
+                    <p className="text-sm text-gray-600 mb-4 line-clamp-2 leading-relaxed flex-grow">
+                      {game.description}
+                    </p>
+
+                    {/* 游戏信息 */}
+                    <div className="flex items-center justify-between text-xs text-gray-500 mb-4">
+                      <span className="flex items-center gap-1">
+                        <span>👥</span>
+                        <span>{game.players}</span>
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <span>🎯</span>
+                        <span>{game.playCount}</span>
+                      </span>
+                      <span className={`font-semibold ${getDifficultyColor(game.difficulty)}`}>
+                        {game.difficulty}
+                      </span>
+                    </div>
+
+                    {/* Play 按钮 */}
+                    <button
+                      className="w-full pixel-button"
+                      onClick={(e) => {
+                        e.stopPropagation()
+                        handlePlayGame(game.slug!)
+                      }}
+                    >
+                      {game.type === 'iframe' ? '🎮 Play Online' : '🚀 Play Now'}
+                    </button>
                   </div>
-                  
-                  <div className="flex items-center justify-between text-xs text-gray-500 mb-3">
-                    <span>👥 {game.players}</span>
-                    <span>🎯 {game.playCount} plays</span>
-                  </div>
-                  
-                  <button 
-                    className="w-full pixel-button"
-                    onClick={() => handlePlayGame(game.slug!)}
-                  >
-                    {game.type === 'iframe' ? '🎮 Play Online' : '🚀 Play Now'}
-                  </button>
                 </div>
               ))}
             </div>

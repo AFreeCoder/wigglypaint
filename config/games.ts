@@ -26,6 +26,7 @@ export interface Game {
   title: string
   description: string
   image: string
+  thumbnail?: string  // 游戏缩略图 URL
   category: GameCategory
   tags: GameTag[]
   difficulty: GameDifficulty
@@ -47,6 +48,7 @@ export const GAMES: Game[] = [
     title: 'WigglyPaint',
     description: 'Draw with 8 animated brushes that create wiggly, jiggly lines with personality! Free online pixel art & GIF maker with living, breathing lines.',
     image: '🎨',
+    thumbnail: '/thumbnails/wigglypaint.jpg',  // 本地缩略图路径,放在 public/thumbnails/ 目录下
     category: 'Casual',
     tags: ['Drawing', 'Animation', 'Creative', 'Pixel Art'],
     difficulty: 'Easy',
@@ -164,6 +166,7 @@ export const GAMES: Game[] = [
     title: 'OVO Unblocked',
     description: 'Master precision parkour in this addictive platformer! Navigate through 40+ skill-building levels with fluid movement mechanics that support problem-solving and perseverance.',
     image: '🏃',
+    thumbnail: '/thumbnails/ovo-unblocked.jpg',
     category: 'Arcade',
     tags: ['Parkour', 'Platform', 'Speed'],
     difficulty: 'Medium',
@@ -283,6 +286,7 @@ export const GAMES: Game[] = [
     title: 'Make Pixel Art Online',
     description: 'Create Pixel Art Online with this powerful digital art tool. Make Pixel Art Online sprites, GIF animations, and join 2M+ artists to collaborate, share, and explore Pixel Art Online creativity.',
     image: '🎮',
+    thumbnail: '/thumbnails/pixilart.jpg',
     category: 'Casual',
     tags: ['Drawing', 'Pixel Art', 'Creative', 'Animation'],
     difficulty: 'Easy',
@@ -402,6 +406,7 @@ export const GAMES: Game[] = [
     title: 'Different Strokes',
     description: 'Collaborative online painting game where players explore a never-ending art exhibition! Draw, remix, and rate user-generated artwork in real-time multiplayer galleries.',
     image: '🎨',
+    thumbnail: '/thumbnails/different-strokes.jpg',
     category: 'Casual',
     tags: ['Drawing', 'Creative', 'Multiplayer'],
     difficulty: 'Easy',
@@ -521,6 +526,7 @@ export const GAMES: Game[] = [
     title: 'Drawaria.online',
     description: 'Free multiplayer drawing and guessing game! Join players worldwide in Pictionary-style rooms, take turns drawing secret words while others guess to earn points.',
     image: '✏️',
+    thumbnail: 'https://r2.wigglypaint.co/thumbnails/drawaria.jpg',
     category: 'Casual',
     tags: ['Drawing', 'Multiplayer', 'Skill'],
     difficulty: 'Easy',
@@ -650,6 +656,7 @@ export const GAMES: Game[] = [
     title: 'Sandspiel',
     description: 'Creative pixel physics simulation sandbox! Paint with elements like sand, water, fire, and lava. Conduct experiments and build your own world with realistic interactions.',
     image: '🌊',
+    thumbnail: 'https://r2.wigglypaint.co/thumbnails/sandspiel.jpg',
     category: 'Casual',
     tags: ['Creative', 'Pixel Art', 'Skill'],
     difficulty: 'Easy',
@@ -779,6 +786,7 @@ export const GAMES: Game[] = [
     title: 'WebGL Fluid Simulation',
     description: 'Mesmerizing GPU-powered fluid dynamics simulation! Interact with realistic flowing liquids, create beautiful patterns, and explore fluid physics in your browser.',
     image: '💧',
+    thumbnail: 'https://r2.wigglypaint.co/thumbnails/webgl-fluid.jpg',
     category: 'Casual',
     tags: ['Creative', 'Skill'],
     difficulty: 'Easy',
@@ -908,6 +916,7 @@ export const GAMES: Game[] = [
     title: 'JS Paint',
     description: 'Classic Microsoft Paint reimagined for the web! Complete digital art creation with familiar tools, unlimited undo, themes, and accessibility features.',
     image: '🎨',
+    thumbnail: 'https://r2.wigglypaint.co/thumbnails/jspaint.jpg',
     category: 'Casual',
     tags: ['Drawing', 'Creative', 'Pixel Art'],
     difficulty: 'Easy',
